@@ -1,0 +1,27 @@
+{
+  "name": "@khums/api-client",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Typed REST client for the Khums API, shared by web and mobile. Platform-agnostic: fetch is injected.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf .turbo coverage"
+  },
+  "dependencies": {
+    "@khums/shared-types": "workspace:*",
+    "@khums/utils": "workspace:*",
+    "@khums/validation": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

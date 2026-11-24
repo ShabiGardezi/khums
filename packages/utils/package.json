@@ -1,0 +1,24 @@
+{
+  "name": "@khums/utils",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Pure, platform-agnostic helpers (Result type, assertions). No I/O.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "clean": "rm -rf .turbo coverage"
+  },
+  "dependencies": {
+    "@khums/shared-types": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

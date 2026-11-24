@@ -1,0 +1,27 @@
+{
+  "name": "@khums/validation",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Zod schemas for every input crossing a trust boundary (forms, API, storage, rule-set files).",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf .turbo coverage"
+  },
+  "dependencies": {
+    "@khums/money": "workspace:*",
+    "@khums/shared-types": "workspace:*",
+    "@khums/utils": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

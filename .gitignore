@@ -1,0 +1,43 @@
+# dependencies
+node_modules/
+
+# build output
+.next/
+out/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# tooling caches
+.turbo/
+.eslintcache
+
+# testing
+coverage/
+playwright-report/
+test-results/
+blob-report/
+
+# environment (commit only .env.example)
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# os / editors
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# local staff directory (development only; contains identity subjects)
+dev-identities.json
+docs/research/bundles/**/.import-state.*.json
+docs/research/bundles/**/.passage-cache.json
+
+# Vercel CLI project link (local only)
+.vercel

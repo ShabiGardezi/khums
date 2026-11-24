@@ -1,0 +1,55 @@
+{
+  "name": "@khums/api",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared NestJS REST API for web, mobile and admin.",
+  "type": "module",
+  "engines": {
+    "node": ">=24.7.0"
+  },
+  "scripts": {
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "start": "node --enable-source-maps dist/main.js",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "openapi": "nest build && node dist/main.js --generate-openapi openapi.json && prettier --write openapi.json",
+    "clean": "rm -rf dist .turbo coverage",
+    "smoke": "node scripts/smoke.mjs",
+    "test:live": "KHUMS_LIVE_TESTS=1 node --env-file-if-exists=.env.test.local ./node_modules/vitest/vitest.mjs run --no-file-parallelism",
+    "test:atlas-itest": "KHUMS_ATLAS_ITEST=1 node --env-file-if-exists=.env.atlas-itest.local ./node_modules/vitest/vitest.mjs run --no-file-parallelism"
+  },
+  "dependencies": {
+    "@khums/core": "workspace:*",
+    "@khums/shared-types": "workspace:*",
+    "@khums/utils": "workspace:*",
+    "@khums/validation": "workspace:*",
+    "@nestjs/common": "catalog:",
+    "@nestjs/core": "catalog:",
+    "@nestjs/platform-express": "catalog:",
+    "@nestjs/swagger": "catalog:",
+    "helmet": "catalog:",
+    "mongodb": "catalog:",
+    "nestjs-pino": "catalog:",
+    "pino": "catalog:",
+    "pino-http": "catalog:",
+    "reflect-metadata": "catalog:",
+    "rxjs": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "catalog:",
+    "@nestjs/testing": "catalog:",
+    "@rspack/core": "catalog:",
+    "@swc/core": "catalog:",
+    "@types/express": "catalog:",
+    "@types/node": "catalog:",
+    "pino-pretty": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "unplugin-swc": "catalog:",
+    "vitest": "catalog:",
+    "webpack-node-externals": "catalog:"
+  }
+}

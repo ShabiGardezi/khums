@@ -1,0 +1,2030 @@
+{
+  "rulings": [
+    {
+      "key": "kha-r-annual-surplus",
+      "refs": [
+        "khamenei-f-INC-01",
+        "khamenei-f-INC-02",
+        "khamenei-f-INC-03",
+        "khamenei-f-INC-04",
+        "khamenei-f-INC-07",
+        "khamenei-f-EXP-01",
+        "khamenei-f-EXP-03",
+        "khamenei-f-EXP-04",
+        "khamenei-f-SUR-04",
+        "khamenei-f-LIA-01",
+        "kha:درآمد کسب و کار",
+        "kha:مؤونه کسب درآمد",
+        "kha:بدهی و مال قرضی",
+        "kha:بدهی بابت مئونه زندگی",
+        "kha:بدهی بابت مئونه کسب و کار",
+        "kha:هدیه (هبه)",
+        "kha:عیدی و پاداش",
+        "kha:کارانه",
+        "kha:ارث",
+        "kha:محاسبه خمس چند شغل",
+        "kha:اسراف و مئونه حرام",
+        "kha:خرید مئونه با پول متعلَّق خمس",
+        "kha:کسر مقدار مخمّس از موجودی سال",
+        "kha:حقوق بازنشستگی",
+        "kha:بیمه بیکاری",
+        "kha:اضافه بر مئونه",
+        "kha:دستۀ اول",
+        "kha:سرمایه",
+        "kha:سرمایه ای که خمس ندارد",
+        "kha:سهام و اوراق بهادار",
+        "kha:تهیّه مئونه مورد نیاز آینده به صورت تدریجی",
+        "khamenei-f-NEC-02",
+        "khamenei-f-NEC-03",
+        "khamenei-f-BUS-01",
+        "khamenei-f-INV-01",
+        "khamenei-f-LIA-05",
+        "khamenei-f-SUR-06",
+        "khamenei-f-MIS-01",
+        "kha:مالیات",
+        "kha:مطالبات بابت اجرت کار",
+        "kha:مطالبات فروش قسطی",
+        "kha:پرداخت خمس از درآمد سال بعد",
+        "kha:سال خمسی",
+        "khamenei-f-SUR-01",
+        "khamenei-f-SUR-02",
+        "khamenei-f-SAV-01",
+        "khamenei-f-SAV-02",
+        "khamenei-f-PRO-04",
+        "khamenei-f-INV-02",
+        "khamenei-f-BUS-02",
+        "khamenei-f-LIA-02",
+        "kha:تقدیم و تأخیر سال خمسی",
+        "kha:پرداخت جداگانه خمس هر درآمد",
+        "kha:سرمایه در گردش مخمّس",
+        "kha:ابزار کسب مخمّس",
+        "kha:سود و ارزش افزوده مال مخمّس",
+        "kha:ترقّی قیمت کالا",
+        "kha:سود بانکها با توجّه به تورّم",
+        "kha:تبدیل مئونه به سرمایه",
+        "kha:زمین و خانه فروخته شده",
+        "kha:افزایش قیمت اموال موهوب",
+        "kha:پس انداز برای آینده نزدیک",
+        "kha:آخرین حقوق سال",
+        "kha:پس انداز درآمد برای جهیزیّه",
+        "kha:پس انداز برای تهیّه ضروریّات زندگی",
+        "kha:پس انداز حقوق برای هزینه های ازدواج",
+        "kha:کسر تورّم",
+        "kha:مهریه",
+        "kha:دیه",
+        "kha:مبالغ پرداخت شده به بیمه",
+        "kha:پول دریافتی از بیمه",
+        "kha-p-bithat-exemptions",
+        "kha-p-bithat-table1-formula",
+        "kha-p-bithat-table1-rows",
+        "kha-p-bithat-table1-guides",
+        "kha-p-bithat-table2",
+        "kha-p-bithat-table2-loan",
+        "kha-p-bithat-table3-cash",
+        "kha-p-bithat-table3-stock",
+        "kha-p-bithat-note3",
+        "kha-p-bithat-note4",
+        "kha-p-bithat-note5",
+        "kha-p-bithat-note6",
+        "kha-p-bithat-note7",
+        "kha-p-bithat-note9",
+        "kha-p-bithat-note10",
+        "kha-p-bithat-note11",
+        "kha-p-bithat-note12",
+        "kha-p-bithat-note13",
+        "kha-p-bithat-note15",
+        "kha-p-bithat-note17",
+        "kha-p-bithat-note18",
+        "kha-p-bithat-note19",
+        "kha-p-bithat-note20",
+        "kha-p-bithat-note22",
+        "kha-p-bithat-note23",
+        "kha-p-bithat-note25",
+        "kha-p-bithat-note27-28",
+        "kha-p-bithat-note29",
+        "kha-p-bithat-note34"
+      ],
+      "payload": {
+        "language": "en",
+        "conclusion": "DRAFT prepared by AI from explicit text only — not verified by a scholar. Annual assessment: at the khums year end, one-fifth of the income from work, business, salaries and rents that exceeds the expenses of oneself and one's dependants («احکام خمس», income chapter). Gifts and other payments one could not claim are not liable; inheritance is not liable. Costs of earning are deducted; a business debt only from the income it produced; debts for this year's living needs that arose after the year's first income are deducted without being paid. Tax is mu'nah: tax for this year's earnings is deducted; past years' tax paid this year is deducted only if it relates to this year (tax section). Paying khums before the year end is allowed (Q227); khums of last year paid from this year's income is not deducted (khums is also due on what was paid, Q247). Wages owed and collectable at the year end are liable even if not received; if not collectable they are income of the year received (receivables sections); credit sales need the cash price and the mark-up separately (review). Bringing the year forward is allowed; postponing is not (assess at the current date first), so a period longer than a year stops for review (Q234, Q235). Separate jobs with separate accounts have separate years without offsetting (Q245); how living expenses are borne across them is not stated (review). Spending on needs, and needs debts of this or past years, paid from this year's income within five days after the year end are deducted (debts and savings sections, Q271). A rise caused by inflation is not a gain: sale gains, deposit profit and the growth of working capital and shares held for growth are liable only above the taxed value or principal plus inflation, using the person's own inflation figure (inflation, added-value, bank-profit, capital and shares sections); mu'nah and gifts not held for trade owe nothing on sale. Savings are liable, except savings for marriage once steps began, emergency savings that would not suffice after khums, and the last salary that would not cover the next month after khums; savings for near-future necessities are not quantified (review). Mahr and diyah received are not liable (mahr and diyah sections). Insurance premiums from the year's income are mu'nah; investment-type payments are liable each year end (premiums section). Insurance compensation paid to the insured is earned income; life-insurance payouts to the spouse and children, and payments to a non-party, are not liable (payouts section).",
+        "explanation": "Encoded as one Rule Builder rule (annual surplus). Counted: salary, business, freelance and rental income, pensions (liable like salary); bonuses only if contractually owed («کارانه»; festive bonus and reward are not liable). Not counted: gifts, inheritance and charity or support received (the gifts chapter: payments one could not claim). A survivors' pension is not liable (Q223). Costs of earning (and business debts) reduce only business, freelance and rental income. Living expenses are deducted unless paid from income whose year had passed (that money owes khums on the purchase price with inflation) or spent before the year's first income (balance chapter); spending beyond status or extravagant stops for review (only the excess is liable). Debts for living needs are deducted only when they arose this year after the first income and are unpaid. Separate lines of work with separate accounts where one made a loss stop for review (the several-jobs note: losses are not offset). Investment returns and sale proceeds stop as uncovered entries. Holdings at year end: things bought with this year's income and still held are counted at their year-end value, and the price paid is deducted; household items needed and kept available are exempt even if unused; capital whose khums would leave too little (or doubtfully enough) for living is exempt; land or an unfinished home for needed housing is exempt (chapters on items beyond mu'nah, capital, capital without khums, shares, gradual acquisition). Decision 81 (form): valuation by how an item was paid for (Tables 1–2), loan-bought items counted at the part repaid, mixed exempt money (note 11), items used for both life and work (note 22), waqf (note 10), dowry (notes 7–8), Hajj savings (note 19), provident fund, gratuity and leave encashment (note 9), partnership (note 5), loans given (note 29), animals, crops and stock at the khums date (Table 3, notes 27–28), and the form's exemptions.",
+        "precaution": "FATWA",
+        "conditions": [
+          "At the khums year end, exceeding the year's expenses",
+          "Debts: for this year's needs, arising after the year's first income",
+          "Business debts: only against the income they produced"
+        ],
+        "exceptions": [
+          "Gifts and payments one could not claim",
+          "Inheritance",
+          "Festive bonus and reward",
+          "Survivors' pension (Q223)"
+        ],
+        "notes": "Rate value '20' is the one-fifth stated in the introduction and income chapter of «احکام خمس». AI-prepared ruling (decision 74); never verified by AI."
+      }
+    },
+    {
+      "key": "kha-r-mined",
+      "refs": ["khamenei-f-INC-01", "kha:معدن"],
+      "payload": {
+        "language": "en",
+        "conclusion": "DRAFT prepared by AI from explicit text only — not verified by a scholar. Khums on extracted mined products whose value after extraction and refining costs equals 15 mithqal of gold; below that, no khums. Payment is immediate, not tied to the khums year.",
+        "explanation": "A value below the nisab gives no khums on the mined product (stated explicitly). Joint extraction (each share must reach the nisab) stops for review.",
+        "precaution": "FATWA",
+        "conditions": ["Value after costs equals 15 mithqal of gold"],
+        "exceptions": ["Below the nisab: no khums"],
+        "notes": "The gram weight of a mithqal is not stated in this source. AI-prepared ruling (decision 74); never verified by AI."
+      }
+    },
+    {
+      "key": "kha-r-treasure",
+      "refs": ["khamenei-f-INC-01", "kha:گنج"],
+      "payload": {
+        "language": "en",
+        "conclusion": "DRAFT prepared by AI from explicit text only — not verified by a scholar. Khums at once on a treasure worth 20 gold dinars or 200 silver dirhams, following any legal regulations on finds.",
+        "explanation": "Below the nisab is not stated explicitly, so it stops for review; so do finds on acquired land (offer to previous owners first) and cases with special legal regulations.",
+        "precaution": "FATWA",
+        "conditions": ["Value reaches the nisab"],
+        "exceptions": [],
+        "notes": "AI-prepared ruling (decision 74); never verified by AI."
+      }
+    },
+    {
+      "key": "kha-r-diving",
+      "refs": ["khamenei-f-INC-01", "kha:جواهری که با غوّاصی به دست آید"],
+      "payload": {
+        "language": "en",
+        "conclusion": "DRAFT prepared by AI from explicit text only — not verified by a scholar. Khums on gems brought up by diving worth 18 nukhud of gold or more after extraction costs.",
+        "explanation": "Below the nisab (not stated explicitly), gems taken with a device without diving (obligatory precaution) and gems from big rivers (obligatory precaution) stop for review.",
+        "precaution": "FATWA",
+        "conditions": ["Value reaches 18 nukhud of gold"],
+        "exceptions": [],
+        "notes": "AI-prepared ruling (decision 74); never verified by AI."
+      }
+    },
+    {
+      "key": "kha-r-mixed",
+      "refs": ["khamenei-f-INC-01", "kha:مال مخلوط با حرام"],
+      "payload": {
+        "language": "en",
+        "conclusion": "DRAFT prepared by AI from explicit text only — not verified by a scholar. Certain that unlawful property is mixed in, with unknown amount and unknown owner: paying khums on the whole makes it lawful; mere doubt of mixing creates no duty.",
+        "explanation": "A known owner or amount, or an unlawful part known to exceed a fifth, stops for review.",
+        "precaution": "FATWA",
+        "conditions": ["Amount and owner unknown"],
+        "exceptions": [],
+        "notes": "AI-prepared ruling (decision 74); never verified by AI."
+      }
+    }
+  ],
+  "rules": [
+    {
+      "key": "kha-rule-annual-surplus",
+      "tests": "kha-annual-salary, kha-annual-business-loss, kha-annual-gifts, kha-annual-debts, kha-annual-stops, kha-annual-holdings, kha-annual-tax, kha-annual-tax-earlier-year, kha-annual-khums-paid, kha-annual-khums-paid-earlier, kha-annual-receivable, kha-annual-receivable-later, kha-annual-receivable-stops, kha-annual-period-long, kha-annual-outside-year, kha-annual-five-days, kha-annual-five-days-late, kha-annual-separate-cycle, kha-annual-debt-repaid-five-days, kha-annual-sale-inflation, kha-annual-sale-munah, kha-annual-sale-stops, kha-annual-capital-growth, kha-annual-shares-kept, kha-annual-bank-inflation, kha-annual-bank-untaxed-principal, kha-annual-savings-marriage, kha-annual-savings-not-exempt, kha-annual-savings-near-future, kha-annual-mahr-diyah, kha-annual-insurance, kha-annual-insurance-investment, kha-annual-insurance-payout, kha-annual-life-insurance-family, kha-annual-household, kha-annual-expenses-exceed-income, kha-form-gradual, kha-form-gradual-rounding, kha-form-unknown-year, kha-form-year-passed, kha-form-loan-capital, kha-form-mixed-unknown, kha-form-mixed-known, kha-form-dual-use, kha-form-beyond-status, kha-form-waqf, kha-form-exemptions, kha-form-provident-fund, kha-form-inheritance, kha-form-salary-unpaid, kha-form-sale-need-ended, kha-form-prepaid, kha-form-needs-of-life, kha-form-stock-animals, kha-form-loan-given, kha-form-partnership, kha-form-minor, kha-form-insurance-maturity, kha-form-hajj-capital-loss, kha-form-shop-fitout",
+      "content": {
+        "category": "ANNUAL_SURPLUS",
+        "rulingId": "@kha-r-annual-surplus",
+        "rate": "20",
+        "includedEntries": [
+          {
+            "kind": "INCOME",
+            "subtype": "EMPLOYMENT"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "BUSINESS"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "FREELANCE"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "RENTAL"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "BONUS"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "PENSION_OR_BENEFIT"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "HOUSEHOLD_ITEM"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "PERSONAL_ITEM"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "VEHICLE"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "JEWELLERY"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "PRECIOUS_METAL"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "INVESTMENT"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "BUSINESS_STOCK"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "BUSINESS_EQUIPMENT"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "REAL_ESTATE"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "LAND"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "HOME"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "RECEIVABLE"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "SALE"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "INVESTMENT_RETURN"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "INSURANCE_PAYOUT"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "LIVESTOCK"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "CROPS_AND_TREES"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "RAW_MATERIAL"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "HOUSEHOLD_STOCK"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "DOWRY_ITEMS"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "COMMITTEE"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "PRIZE_BOND"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "PREPAID"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "PARTNERSHIP_SHARE"
+          },
+          {
+            "kind": "ASSET",
+            "subtype": "RENTAL_ASSET"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "PROVIDENT_FUND"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "GRATUITY"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "LEAVE_ENCASHMENT"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "KHULA_RECEIVED"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "INHERITANCE"
+          }
+        ],
+        "deductions": [
+          {
+            "type": "LIVING_EXPENSES",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "HOUSEHOLD"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "HOUSING"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "EDUCATION"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "HEALTH"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "TRAVEL"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "DONATION"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "RELIGIOUS_DUTY"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "TAX"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "INSURANCE"
+              }
+            ],
+            "afterYearEndDays": 5
+          },
+          {
+            "type": "COSTS_OF_EARNING",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "BUSINESS"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "CAPITAL_LOSS"
+              },
+              {
+                "kind": "LIABILITY",
+                "subtype": "BUSINESS_DEBT"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "SHOP_FITOUT"
+              }
+            ],
+            "against": [
+              {
+                "kind": "INCOME",
+                "subtype": "BUSINESS"
+              },
+              {
+                "kind": "INCOME",
+                "subtype": "FREELANCE"
+              },
+              {
+                "kind": "INCOME",
+                "subtype": "RENTAL"
+              }
+            ],
+            "afterYearEndDays": 5
+          },
+          {
+            "type": "DEDUCTIBLE_DEBTS",
+            "entries": [
+              {
+                "kind": "LIABILITY",
+                "subtype": "LOAN"
+              },
+              {
+                "kind": "LIABILITY",
+                "subtype": "CREDIT_CARD"
+              },
+              {
+                "kind": "LIABILITY",
+                "subtype": "UNPAID_BILL"
+              },
+              {
+                "kind": "LIABILITY",
+                "subtype": "MORTGAGE"
+              }
+            ]
+          },
+          {
+            "type": "HOLDINGS_PURCHASES",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "ASSET_PURCHASE"
+              }
+            ]
+          },
+          {
+            "type": "KHUMS_ALREADY_PAID",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "KHUMS_PAID"
+              }
+            ]
+          },
+          {
+            "type": "COST_OF_ITEMS_SOLD",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "SOLD_ITEM_COST"
+              }
+            ],
+            "against": [
+              {
+                "kind": "INCOME",
+                "subtype": "SALE"
+              }
+            ],
+            "inflation": "ADDED"
+          },
+          {
+            "type": "PREVIOUSLY_TAXED_VALUE",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_STOCK"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "INVESTMENT"
+              }
+            ],
+            "against": [
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_STOCK"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "INVESTMENT"
+              }
+            ],
+            "inflation": "ADDED"
+          },
+          {
+            "type": "TAXED_PRINCIPAL",
+            "entries": [
+              {
+                "kind": "BALANCE",
+                "subtype": "BANK_ACCOUNT"
+              }
+            ],
+            "against": [
+              {
+                "kind": "INCOME",
+                "subtype": "INVESTMENT_RETURN"
+              }
+            ],
+            "inflation": "ONLY"
+          },
+          {
+            "type": "EXEMPT_SAVINGS",
+            "entries": [
+              {
+                "kind": "BALANCE",
+                "subtype": "CASH"
+              },
+              {
+                "kind": "BALANCE",
+                "subtype": "BANK_ACCOUNT"
+              },
+              {
+                "kind": "BALANCE",
+                "subtype": "DIGITAL_WALLET"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "LOAN_GIVEN"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "scope": "ENTRY",
+            "effect": "INCLUDE",
+            "label": "Were you entitled to this payment under your contract, so that you could claim it if it were withheld?",
+            "entries": [
+              {
+                "kind": "INCOME",
+                "subtype": "BONUS"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Is this a pension paid to you as a survivor after the insured person's death?",
+            "entries": [
+              {
+                "kind": "INCOME",
+                "subtype": "PENSION_OR_BENEFIT"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Is this the part the employer adds as a gift, bonus or reward under the agreement? (Form note 9: not liable for Ayatollah Khamenei.)",
+            "effect": "EXCLUDE",
+            "entries": [
+              {
+                "kind": "INCOME",
+                "subtype": "PROVIDENT_FUND"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Do you know for certain that khums was due on this inheritance (or owed by the deceased on it)? If yes, enter only that part as the amount. (Form note 6.)",
+            "effect": "INCLUDE",
+            "entries": [
+              {
+                "kind": "INCOME",
+                "subtype": "INHERITANCE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Was this paid from income whose khums year had already passed without khums being paid?",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "HOUSEHOLD"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "HOUSING"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "EDUCATION"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "HEALTH"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "TRAVEL"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "DONATION"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "RELIGIOUS_DUTY"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "TAX"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "INSURANCE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "INCLUDE",
+            "label": "Was this spent after you received the first income of this khums year?",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "HOUSEHOLD"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "HOUSING"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "EDUCATION"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "HEALTH"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "TRAVEL"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "DONATION"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "RELIGIOUS_DUTY"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "INSURANCE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Was any of this spending beyond what is customary for your status, extravagant, or on something unlawful?",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "HOUSEHOLD"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "HOUSING"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "EDUCATION"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "HEALTH"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "TRAVEL"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "DONATION"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "RELIGIOUS_DUTY"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "INSURANCE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Was this paid in advance for a period after your khums date (school fees, rent, a Hajj or ziyarah booking)? (Form Table 3, row 2: it still counts as yours on the khums date.)",
+            "effect": "EXCLUDE",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "HOUSING"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "EDUCATION"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "TRAVEL"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "RELIGIOUS_DUTY"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "HOUSEHOLD"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "INCLUDE",
+            "label": "Is this debt (a) for this khums year's living needs, arising after this year's first income and still unpaid, or (b) a needs debt of this or an earlier year that you repaid from this year's income within five days after the year end?",
+            "entries": [
+              {
+                "kind": "LIABILITY",
+                "subtype": "LOAN"
+              },
+              {
+                "kind": "LIABILITY",
+                "subtype": "CREDIT_CARD"
+              },
+              {
+                "kind": "LIABILITY",
+                "subtype": "UNPAID_BILL"
+              },
+              {
+                "kind": "LIABILITY",
+                "subtype": "MORTGAGE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "INCLUDE",
+            "label": "Is this business debt for the costs of earning this year's business income?",
+            "entries": [
+              {
+                "kind": "LIABILITY",
+                "subtype": "BUSINESS_DEBT"
+              }
+            ]
+          },
+          {
+            "scope": "CALCULATION",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Do you have separate lines of work or business with separate accounts, where one of them made a loss this year?",
+            "entries": []
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Have you made this a waqf (endowment), or named it for one, but not yet handed it to the trustee by your khums date? (Form note 10: khums is due on it.)",
+            "effect": "COUNT_AS",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "HOME"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "LAND"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "REAL_ESTATE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOUSEHOLD_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PERSONAL_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "VEHICLE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_EQUIPMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RENTAL_ASSET"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "JEWELLERY"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PRECIOUS_METAL"
+              }
+            ],
+            "treatment": {
+              "amount": "ENTRY"
+            }
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Is this farm land only the amount you cultivate for your own or your family's food (wheat, rice, vegetables, fruit)? (Form Table 1, row 8: a need of life.)",
+            "effect": "EXCLUDE",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "LAND"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Are these animals or birds kept for your household's own milk, eggs or use, or for beauty, within your status? (Form Table 1, row 6: a need of life.)",
+            "effect": "EXCLUDE",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "LIVESTOCK"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Is this dowry given to your daughter, or kept to give her, in a community where dowry is customarily built up gradually? (Form Table 1, row 7: a need of life.)",
+            "effect": "EXCLUDE",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "DOWRY_ITEMS"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Was this bought gradually (in instalments) or with a loan? (Form Table 1, Ayatollah Khamenei: khums is 1/120 of the purchase price.)",
+            "effect": "COUNT_AS",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "HOUSEHOLD_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PERSONAL_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "VEHICLE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "JEWELLERY"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOME"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "DOWRY_ITEMS"
+              }
+            ],
+            "treatment": {
+              "amount": "ASKED",
+              "askedLabel": "Purchase price (what was paid for it)",
+              "khumsShare": {
+                "numerator": 1,
+                "denominator": 120
+              }
+            }
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Is it unknown whether a khums year had passed on the money this was bought with? (Form Table 1: settlement at one tenth of the purchase price as khums.)",
+            "effect": "COUNT_AS",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "HOUSEHOLD_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PERSONAL_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "VEHICLE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "JEWELLERY"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOME"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "DOWRY_ITEMS"
+              }
+            ],
+            "treatment": {
+              "amount": "ASKED",
+              "askedLabel": "Purchase price (what was paid for it)",
+              "khumsShare": {
+                "numerator": 1,
+                "denominator": 10
+              }
+            }
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Is it unknown whether a khums year had passed on the money this business asset was bought with? (Form Table 2: khums on the purchase price.)",
+            "effect": "COUNT_AS",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_EQUIPMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RENTAL_ASSET"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "REAL_ESTATE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "LAND"
+              }
+            ],
+            "treatment": {
+              "amount": "ASKED",
+              "askedLabel": "Purchase price (what was paid for it)"
+            }
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Was part of the price paid from money that owes no khums (e.g. inheritance), and do you know the other part? (Form note 11: khums only on the part from money that owed khums.)",
+            "effect": "COUNT_AS",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_EQUIPMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RENTAL_ASSET"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "REAL_ESTATE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "LAND"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_STOCK"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RAW_MATERIAL"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "INVESTMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOUSEHOLD_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PERSONAL_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "VEHICLE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "JEWELLERY"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOME"
+              }
+            ],
+            "treatment": {
+              "amount": "ASKED",
+              "askedLabel": "Part of the price paid from money on which khums was due"
+            }
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Was part of the price paid from money that owes no khums, but the parts are not known? (Form note 11: settlement at one tenth of the purchase price plus inflation.)",
+            "effect": "COUNT_AS",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_EQUIPMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RENTAL_ASSET"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "REAL_ESTATE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "LAND"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_STOCK"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RAW_MATERIAL"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "INVESTMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOUSEHOLD_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PERSONAL_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "VEHICLE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "JEWELLERY"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOME"
+              }
+            ],
+            "treatment": {
+              "amount": "ASKED",
+              "askedLabel": "Purchase price (what was paid for it)",
+              "inflation": "ADDED",
+              "khumsShare": {
+                "numerator": 1,
+                "denominator": 10
+              }
+            }
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Was this business asset, or something beyond your needs, bought on a loan? (Form Table 2, guide 1: count only the part of the price you repaid from this year's income; do not also enter it as 'Price paid'.)",
+            "effect": "COUNT_AS",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_EQUIPMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RENTAL_ASSET"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "REAL_ESTATE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "LAND"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOUSEHOLD_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PERSONAL_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "VEHICLE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "JEWELLERY"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOME"
+              }
+            ],
+            "treatment": {
+              "amount": "ASKED",
+              "askedLabel": "Part of the price you repaid from this khums year's income"
+            }
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "COUNT_AS",
+            "label": "Was this bought with income whose khums year had already passed without khums being paid? (Form Table 1, guide 1: khums on the purchase price plus inflation since then.)",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "HOUSEHOLD_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PERSONAL_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "VEHICLE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "JEWELLERY"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PRECIOUS_METAL"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "INVESTMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_STOCK"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_EQUIPMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "REAL_ESTATE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "LAND"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOME"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RENTAL_ASSET"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "DOWRY_ITEMS"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RAW_MATERIAL"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "COMMITTEE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PRIZE_BOND"
+              }
+            ],
+            "treatment": {
+              "amount": "ASKED",
+              "askedLabel": "Purchase price (what was paid for it)",
+              "inflation": "ADDED"
+            }
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "INCLUDE",
+            "label": "Was this bought with this khums year's income, and have you entered the price you paid as 'Price paid for something you still own'? (The value you entered for it is its value at the end of the khums year.)",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "HOUSEHOLD_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PERSONAL_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "VEHICLE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "JEWELLERY"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PRECIOUS_METAL"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_EQUIPMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "REAL_ESTATE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "LAND"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOME"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RENTAL_ASSET"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "DOWRY_ITEMS"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "COMMITTEE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PRIZE_BOND"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PREPAID"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Was it needed and kept available for your household's use during this khums year (even if it was not used)?",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "HOUSEHOLD_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PERSONAL_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "VEHICLE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "JEWELLERY"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOME"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Is this something usually bought for business that you also use personally? (Form note 22: khums on the business share of its price.)",
+            "effect": "COUNT_AS",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "VEHICLE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PERSONAL_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_EQUIPMENT"
+              }
+            ],
+            "treatment": {
+              "amount": "ASKED",
+              "askedLabel": "Purchase price (what was paid for it)",
+              "portion": {
+                "askedLabel": "Business share of its use (%)"
+              }
+            }
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Is this beyond your household's need or status? (Form Table 1 and note 20: khums on the price you paid for it.)",
+            "effect": "COUNT_AS",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "HOUSEHOLD_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "PERSONAL_ITEM"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "VEHICLE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "JEWELLERY"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOME"
+              }
+            ],
+            "treatment": {
+              "amount": "ASKED",
+              "askedLabel": "Purchase price (what was paid for it)"
+            }
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "If you paid khums on this business capital, would the rest be insufficient, or doubtfully sufficient, for your living costs within your status?",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_STOCK"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_EQUIPMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RENTAL_ASSET"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RAW_MATERIAL"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Is this a plot or home you need now, on which you will build within a month or two, or which you could not build if you paid khums on it? (Form note 15: no khums.)",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "LAND"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "REAL_ESTATE"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "HOME"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Was this price paid from money other than this khums year's income (for example khums-paid, inherited or gift money), before this year's first income, or from income whose khums year had passed?",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "ASSET_PURCHASE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Was this tax for the earnings of an earlier year, rather than this khums year's earnings?",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "TAX"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Was this khums paid for an earlier khums year, rather than on this khums year's income? (Paid for an earlier year from this year's income, it is not deducted: khums is also due on what was paid.)",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "KHUMS_PAID"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Is this salary for your work that had not been paid to you by your khums date? (Form note 7: for Ayatollah Khamenei it is income of the year you receive it.)",
+            "effect": "EXCLUDE",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "RECEIVABLE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Is this owed to you for something you sold on credit, rather than wages or fees for your work?",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "RECEIVABLE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Is this a loan you gave from income whose khums year had already passed without khums being paid?",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "RECEIVABLE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "INCLUDE",
+            "label": "Is this wages or fees owed to you for work in this khums year, which you have not entered as income? (A loan you gave from this year's income is already part of your surplus; a loan of khums-paid money owes nothing.)",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "RECEIVABLE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Was it not collectable at the end of the khums year? (Then it is income of the year you receive it.)",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "RECEIVABLE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Is this assessment for one of several jobs that keep their own khums years with separate accounts? (Which job's income bears living expenses is not stated in the rulings read.)",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "HOUSEHOLD"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "HOUSING"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "EDUCATION"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "HEALTH"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "TRAVEL"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "DONATION"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "RELIGIOUS_DUTY"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "TAX"
+              },
+              {
+                "kind": "EXPENSE",
+                "subtype": "INSURANCE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Had your need for the item you sold ended for good during the year, and did you then hold it to trade? (Form note 18: the rise in its price is this year's income.)",
+            "effect": "COUNT_AS",
+            "entries": [
+              {
+                "kind": "INCOME",
+                "subtype": "SALE"
+              }
+            ],
+            "treatment": {
+              "amount": "ENTRY"
+            }
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Was the item you sold part of your mu'nah (used for your household's needs), or khums-paid land sold to buy a home in the same year?",
+            "entries": [
+              {
+                "kind": "INCOME",
+                "subtype": "SALE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Did you receive the item you sold as a gift, without holding it for trade?",
+            "entries": [
+              {
+                "kind": "INCOME",
+                "subtype": "SALE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Did you receive the item you sold by inheritance, or as a gift that you then held for sale as capital?",
+            "entries": [
+              {
+                "kind": "INCOME",
+                "subtype": "SALE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Was the item you sold bought with income whose khums year had already passed without khums being paid?",
+            "entries": [
+              {
+                "kind": "INCOME",
+                "subtype": "SALE"
+              }
+            ]
+          },
+          {
+            "scope": "CALCULATION",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Did any sale this year bring less than the item's cost or taxed value plus its inflation?",
+            "entries": []
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "INCLUDE",
+            "label": "Was this bought with this khums year's income (price entered as 'Price paid for something you still own'), or is it working capital or shares held for price growth from an earlier year, with its last taxed value entered dated before this year? (Shares kept for value or dividends: not until sold.)",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_STOCK"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "INVESTMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RAW_MATERIAL"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Is this capital held from an earlier year and not sellable at present?",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_STOCK"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "INVESTMENT"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "RAW_MATERIAL"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "INCLUDE",
+            "label": "Is this the value of this capital on which khums was last paid (or the untaxable money it came from), at the end of the previous khums year?",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "BUSINESS_STOCK"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "INVESTMENT"
+              }
+            ],
+            "openingValues": true
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Was khums due on this deposit's principal but not paid?",
+            "entries": [
+              {
+                "kind": "BALANCE",
+                "subtype": "BANK_ACCOUNT"
+              }
+            ],
+            "openingValues": true
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Is this money saved for essential items or necessary costs that you will pay in the near future after the year end?",
+            "entries": [
+              {
+                "kind": "BALANCE",
+                "subtype": "CASH"
+              },
+              {
+                "kind": "BALANCE",
+                "subtype": "BANK_ACCOUNT"
+              },
+              {
+                "kind": "BALANCE",
+                "subtype": "DIGITAL_WALLET"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "INCLUDE",
+            "label": "Is this money from this year's income that (a) you saved for marriage costs after steps towards the marriage began, (b) you keep for emergencies and the rest after khums would not relieve the concern, or (c) your last salary, the rest of which after khums would not cover next month?",
+            "entries": [
+              {
+                "kind": "BALANCE",
+                "subtype": "CASH"
+              },
+              {
+                "kind": "BALANCE",
+                "subtype": "BANK_ACCOUNT"
+              },
+              {
+                "kind": "BALANCE",
+                "subtype": "DIGITAL_WALLET"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Is this payment for investment-type insurance (savings returned to you with profit)?",
+            "entries": [
+              {
+                "kind": "EXPENSE",
+                "subtype": "INSURANCE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "effect": "EXCLUDE",
+            "label": "Is this life insurance paid to you as the insured's spouse or child, or compensation paid to you as someone who was not a party to the insurance?",
+            "entries": [
+              {
+                "kind": "INCOME",
+                "subtype": "INSURANCE_PAYOUT"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Is this the maturity payout of an investment-type insurance policy? (Form note 13: only the amount above the premiums you paid is income.)",
+            "effect": "COUNT_AS",
+            "entries": [
+              {
+                "kind": "INCOME",
+                "subtype": "INSURANCE_PAYOUT"
+              }
+            ],
+            "treatment": {
+              "amount": "ASKED",
+              "askedLabel": "Amount received above the premiums you paid"
+            }
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Can these animals, young, crops or trees be sold (or used) at their value on your khums date? (Form notes 27–28: then they are this year's income; if not, next year's.)",
+            "effect": "INCLUDE",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "LIVESTOCK"
+              },
+              {
+                "kind": "ASSET",
+                "subtype": "CROPS_AND_TREES"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Was khums never paid on this share (its capital and earlier years' profit), and is it in your control without hardship? (Form note 5: pay its khums now. Enter this year's profit as business income.)",
+            "effect": "INCLUDE",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "PARTNERSHIP_SHARE"
+              }
+            ]
+          },
+          {
+            "scope": "ENTRY",
+            "label": "Did you lend this from this khums year's income, and can you not recover it now (or only with difficulty)? (Form note 29: its khums is due when you recover it.)",
+            "effect": "INCLUDE",
+            "entries": [
+              {
+                "kind": "ASSET",
+                "subtype": "LOAN_GIVEN"
+              }
+            ]
+          },
+          {
+            "scope": "CALCULATION",
+            "label": "Is this assessment for a child below the age of maturity? (Form note 4: no khums for the child or the guardian; at maturity the child calculates what they then hold.)",
+            "effect": "EXCLUDE",
+            "entries": []
+          }
+        ],
+        "exceptions": [
+          {
+            "kind": "INCOME",
+            "subtype": "GIFT"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "CHARITY_RECEIVED"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "MAHR"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "DIYAH"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "SCHOLARSHIP"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "INCOME_SUPPORT"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "DEATH_BENEFIT"
+          },
+          {
+            "kind": "INCOME",
+            "subtype": "DOWRY_RECEIVED"
+          },
+          {
+            "kind": "BALANCE",
+            "subtype": "HAJJ_SAVINGS"
+          },
+          {
+            "kind": "EXPENSE",
+            "subtype": "FIXED_CAPITAL_LOSS"
+          }
+        ],
+        "threshold": null,
+        "sourceRefs": [
+          "@kha:درآمد کسب و کار",
+          "@kha:مؤونه کسب درآمد",
+          "@kha:بدهی و مال قرضی",
+          "@kha:بدهی بابت مئونه کسب و کار",
+          "@kha:هدیه (هبه)",
+          "@kha:عیدی و پاداش",
+          "@kha:کارانه",
+          "@kha:ارث",
+          "@kha:محاسبه خمس چند شغل",
+          "@kha:اسراف و مئونه حرام",
+          "@kha:خرید مئونه با پول متعلَّق خمس",
+          "@kha:کسر مقدار مخمّس از موجودی سال",
+          "@kha:حقوق بازنشستگی",
+          "@kha:بیمه بیکاری",
+          "@kha:اضافه بر مئونه",
+          "@kha:سرمایه",
+          "@kha:سرمایه ای که خمس ندارد",
+          "@kha:سهام و اوراق بهادار",
+          "@kha:تهیّه مئونه مورد نیاز آینده به صورت تدریجی",
+          "@kha:مالیات",
+          "@kha:مطالبات بابت اجرت کار",
+          "@kha:مطالبات فروش قسطی",
+          "@kha:پرداخت خمس از درآمد سال بعد",
+          "@kha:سال خمسی",
+          "@kha:تقدیم و تأخیر سال خمسی",
+          "@kha:پرداخت جداگانه خمس هر درآمد",
+          "@kha:بدهی بابت مئونه زندگی",
+          "@kha:سرمایه در گردش مخمّس",
+          "@kha:ابزار کسب مخمّس",
+          "@kha:سود و ارزش افزوده مال مخمّس",
+          "@kha:ترقّی قیمت کالا",
+          "@kha:سود بانکها با توجّه به تورّم",
+          "@kha:تبدیل مئونه به سرمایه",
+          "@kha:زمین و خانه فروخته شده",
+          "@kha:افزایش قیمت اموال موهوب",
+          "@kha:پس انداز برای آینده نزدیک",
+          "@kha:آخرین حقوق سال",
+          "@kha:پس انداز درآمد برای جهیزیّه",
+          "@kha:پس انداز برای تهیّه ضروریّات زندگی",
+          "@kha:پس انداز حقوق برای هزینه های ازدواج",
+          "@kha:کسر تورّم",
+          "@kha:مهریه",
+          "@kha:دیه",
+          "@kha:مبالغ پرداخت شده به بیمه",
+          "@kha:پول دریافتی از بیمه",
+          "@kha-src-bithat-form",
+          "@kha-p-bithat-exemptions",
+          "@kha-p-bithat-table1-formula",
+          "@kha-p-bithat-table1-rows",
+          "@kha-p-bithat-table1-guides",
+          "@kha-p-bithat-table2",
+          "@kha-p-bithat-table2-loan",
+          "@kha-p-bithat-table3-cash",
+          "@kha-p-bithat-table3-stock",
+          "@kha-p-bithat-note3",
+          "@kha-p-bithat-note4",
+          "@kha-p-bithat-note5",
+          "@kha-p-bithat-note6",
+          "@kha-p-bithat-note7",
+          "@kha-p-bithat-note9",
+          "@kha-p-bithat-note10",
+          "@kha-p-bithat-note11",
+          "@kha-p-bithat-note12",
+          "@kha-p-bithat-note13",
+          "@kha-p-bithat-note15",
+          "@kha-p-bithat-note17",
+          "@kha-p-bithat-note18",
+          "@kha-p-bithat-note19",
+          "@kha-p-bithat-note20",
+          "@kha-p-bithat-note22",
+          "@kha-p-bithat-note23",
+          "@kha-p-bithat-note25",
+          "@kha-p-bithat-note27-28",
+          "@kha-p-bithat-note29",
+          "@kha-p-bithat-note34"
+        ],
+        "requirementFlags": [],
+        "otherRequirement": null,
+        "notes": "AI-prepared from explicit text (decision 74). Investment returns and sale proceeds are deliberately not counted: they stop as uncovered entries. Decision 81: also transcribed from the Al-Bi'that Trust khums form (Nov 2026; owner-accepted scholar source; the form wins where it differs). Each earner keeps their own khums year and each assessment has its own period (form note 3); taxed money mixed with new income needs no calculation (note 34). A rise in a shop's value from fixed decoration is entered as 'Other property' (note 25).",
+        "periodLongerThanAYear": "STOP_FOR_REVIEW"
+      }
+    },
+    {
+      "key": "kha-rule-mined",
+      "tests": "kha-mined",
+      "content": {
+        "category": "MINED_PRODUCT",
+        "rulingId": "@kha-r-mined",
+        "rate": "20",
+        "includedEntries": [
+          {
+            "kind": "INCOME",
+            "subtype": "MINED_PRODUCT"
+          }
+        ],
+        "deductions": [],
+        "exceptions": [],
+        "threshold": null,
+        "conditions": [
+          {
+            "scope": "CALCULATION",
+            "effect": "EXCLUDE",
+            "label": "Is the value of what you extracted, after extraction and refining costs, less than the value of 15 mithqal of gold?",
+            "entries": []
+          },
+          {
+            "scope": "CALCULATION",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Did you extract it together with other people?",
+            "entries": []
+          }
+        ],
+        "sourceRefs": ["@kha:معدن"],
+        "requirementFlags": [],
+        "otherRequirement": null,
+        "notes": "AI-prepared from explicit text (decision 74)."
+      }
+    },
+    {
+      "key": "kha-rule-treasure",
+      "tests": "kha-treasure",
+      "content": {
+        "category": "TREASURE",
+        "rulingId": "@kha-r-treasure",
+        "rate": "20",
+        "includedEntries": [
+          {
+            "kind": "INCOME",
+            "subtype": "TREASURE"
+          }
+        ],
+        "deductions": [],
+        "exceptions": [],
+        "threshold": null,
+        "conditions": [
+          {
+            "scope": "CALCULATION",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Is the treasure worth less than both 20 gold dinars and 200 silver dirhams?",
+            "entries": []
+          },
+          {
+            "scope": "CALCULATION",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Did you find it on land you acquired (bought or were given) where a previous owner might have a claim, or do special legal regulations apply to the find?",
+            "entries": []
+          }
+        ],
+        "sourceRefs": ["@kha:گنج"],
+        "requirementFlags": [],
+        "otherRequirement": null,
+        "notes": "AI-prepared from explicit text (decision 74)."
+      }
+    },
+    {
+      "key": "kha-rule-diving",
+      "tests": "kha-diving",
+      "content": {
+        "category": "DIVING_GEMS",
+        "rulingId": "@kha-r-diving",
+        "rate": "20",
+        "includedEntries": [
+          {
+            "kind": "INCOME",
+            "subtype": "DIVING_GEMS"
+          }
+        ],
+        "deductions": [],
+        "exceptions": [],
+        "threshold": null,
+        "conditions": [
+          {
+            "scope": "CALCULATION",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Are the gems worth less than 18 nukhud of gold after extraction costs?",
+            "entries": []
+          },
+          {
+            "scope": "CALCULATION",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Did you take them with a device without diving, or from a river rather than the sea?",
+            "entries": []
+          }
+        ],
+        "sourceRefs": ["@kha:جواهری که با غوّاصی به دست آید"],
+        "requirementFlags": [],
+        "otherRequirement": null,
+        "notes": "AI-prepared from explicit text (decision 74)."
+      }
+    },
+    {
+      "key": "kha-rule-mixed",
+      "tests": "kha-mixed",
+      "content": {
+        "category": "MIXED_FUNDS",
+        "rulingId": "@kha-r-mixed",
+        "rate": "20",
+        "includedEntries": [
+          {
+            "kind": "BALANCE",
+            "subtype": "MIXED_FUNDS"
+          }
+        ],
+        "deductions": [],
+        "exceptions": [],
+        "threshold": null,
+        "conditions": [
+          {
+            "scope": "CALCULATION",
+            "effect": "STOP_FOR_REVIEW",
+            "label": "Do you know who owns the unlawful part or how much it is, or that it is more than one-fifth of the whole?",
+            "entries": []
+          }
+        ],
+        "sourceRefs": ["@kha:مال مخلوط با حرام"],
+        "requirementFlags": [],
+        "otherRequirement": null,
+        "notes": "AI-prepared from explicit text (decision 74)."
+      }
+    }
+  ]
+}

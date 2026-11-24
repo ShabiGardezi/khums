@@ -1,0 +1,16 @@
+node_modules
+pnpm-lock.yaml
+.next
+.turbo
+dist
+coverage
+playwright-report
+test-results
+next-env.d.ts
+
+# Preserved document revisions must stay byte-identical
+docs/research/archive
+# Frozen rule-pack snapshots: byte-exact historical content (CLAUDE.md rule 7)
+packages/core/src/provisional/history/*.json
+docs/research/bundles/*/bundle.json
+docs/research/COVERAGE.md

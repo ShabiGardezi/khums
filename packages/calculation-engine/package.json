@@ -1,0 +1,28 @@
+{
+  "name": "@khums/calculation-engine",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Generic, deterministic rule-pack interpreter for Khums assessments. Contains no Khums formula: all religious logic comes from approved rule-pack data.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --coverage",
+    "clean": "rm -rf .turbo coverage"
+  },
+  "dependencies": {
+    "@khums/money": "workspace:*",
+    "@khums/shared-types": "workspace:*",
+    "@khums/utils": "workspace:*",
+    "@noble/hashes": "catalog:"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

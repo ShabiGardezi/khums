@@ -1,0 +1,118 @@
+[
+  {
+    "key": "kha-src-ahkam-khums",
+    "fetchKind": "khamenei-ahkam",
+    "payload": {
+      "title": {
+        "original": "احکام خمس",
+        "translation": "Rulings of Khums"
+      },
+      "originalLanguage": "fa",
+      "sourceClass": "OFFICE_OWN",
+      "sourceTier": 1,
+      "publisher": "انتشارات انقلاب اسلامی (Enqelab-e Eslami Publications), published on leader.ir",
+      "edition": "Web book (EPUB/PDF export); topical series; no print edition or date shown",
+      "publicationDate": {
+        "original": null,
+        "gregorian": null
+      },
+      "url": "https://www.leader.ir/fa/book/215/%D8%A7%D8%AD%DA%A9%D8%A7%D9%85-%D8%AE%D9%85%D8%B3",
+      "authorship": {
+        "statedAuthor": "Ayatollah Sayyid Ali Khamenei (fatwas compiled by the publisher; the introduction states the office of istiftaat approved the book)",
+        "establishedBy": null,
+        "status": "UNVERIFIED"
+      },
+      "authenticity": {
+        "status": "UNVERIFIED",
+        "compareWith": ["اجوبة الاستفتائات (Persian)", "THE RULINGS OF KHUMS (English, leader.ir)"]
+      },
+      "accessStatus": "READABLE",
+      "copyright": "UNKNOWN",
+      "canonicalForMarja": "UNDECIDED",
+      "notes": "The only Khamenei source with documented lifetime attribution (PRIMARY_SOURCE_INVENTORY §3.3–§3.5); now served by his successor's office: REVIEW_PROCESS §15 applies. Passages are cited by chapter heading; questions 223–271 also by their printed number. AI-prepared record (Phase 4); not verified by a scholar."
+    },
+    "ai": [
+      {
+        "assistance": "SOURCE_LOCATING",
+        "field": "payload"
+      }
+    ]
+  },
+  {
+    "key": "kha-src-ajwibah",
+    "fetchKind": "khamenei-ajwibah",
+    "payload": {
+      "title": {
+        "original": "اجوبة الاستفتائات",
+        "translation": "Answers to Inquiries (Ajwibat al-Istifta'at)"
+      },
+      "originalLanguage": "fa",
+      "sourceClass": "OFFICE_OWN",
+      "sourceTier": 1,
+      "publisher": "leader.ir (office of the Leader, now serving the successor's office)",
+      "edition": "Web book (EPUB export, leader.ir book 2); no print edition or date shown",
+      "publicationDate": {
+        "original": null,
+        "gregorian": null
+      },
+      "url": "https://www.leader.ir/fa/book/2/%D8%A7%D8%AC%D9%88%D8%A8%D8%A9-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%AA%D8%A7%D8%A6%D8%A7%D8%AA",
+      "authorship": {
+        "statedAuthor": "Ayatollah Sayyid Ali Khamenei (answers to questions)",
+        "establishedBy": null,
+        "status": "UNVERIFIED"
+      },
+      "authenticity": {
+        "status": "UNVERIFIED",
+        "compareWith": ["احکام خمس (leader.ir book 215)"]
+      },
+      "accessStatus": "READABLE",
+      "copyright": "UNKNOWN",
+      "canonicalForMarja": "UNDECIDED",
+      "notes": "Taqlid chapter (Q1–69) read for the continued-taqlid questions; the page shows no author or date (PRIMARY_SOURCE_INVENTORY §3.1, class C). Cited by question number. AI-prepared record (Phase 4); not verified by a scholar."
+    },
+    "ai": [
+      {
+        "assistance": "SOURCE_LOCATING",
+        "field": "payload"
+      }
+    ]
+  },
+  {
+    "key": "kha-src-bithat-form",
+    "payload": {
+      "title": {
+        "original": "محاسبہ خمس فارم (نومبر 2026)",
+        "translation": "Khums Calculation Form (November 2026)"
+      },
+      "originalLanguage": "ur",
+      "sourceClass": "SCHOLAR_PROVIDED",
+      "sourceTier": 3,
+      "publisher": "Al-Bi'that Trust, Rajoa Sadat, Chiniot District, Pakistan",
+      "edition": "November 2026 (the trust states a revised version will follow)",
+      "publicationDate": {
+        "original": "نومبر 2026",
+        "gregorian": null
+      },
+      "url": null,
+      "authorship": {
+        "statedAuthor": "Al-Bi'that Trust",
+        "establishedBy": null,
+        "status": "UNVERIFIED"
+      },
+      "authenticity": {
+        "status": "UNVERIFIED",
+        "compareWith": []
+      },
+      "accessStatus": "READABLE",
+      "copyright": "EXCERPTS_ONLY",
+      "canonicalForMarja": "UNDECIDED",
+      "notes": "Decision 81 (owner, 2026-11-24): a form a scholar shared with the owner, who declared it authenticated and accepted it as a research source; it covers Ayatollah Sistani and Ayatollah Khamenei. AI-transcribed short excerpts; not verified by a scholar in this platform."
+    },
+    "ai": [
+      {
+        "assistance": "SOURCE_LOCATING",
+        "field": "payload"
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+# Docker build context for apps/api/Dockerfile (M4.7). Keep secrets and local data OUT of images.
+
+# Secrets and local-only data (never in a build context or image)
+.env
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.key
+**/dev-identities.json
+**/integrity-archive/
+**/checkpoint-archive*.json
+**/backups/
+.claude/
+
+# Dependencies, build output and caches (rebuilt inside the image)
+**/node_modules
+**/dist
+**/.next
+**/.turbo
+**/coverage
+**/test-results
+**/playwright-report
+**/blob-report
+**/*.tsbuildinfo
+**/*.log
+
+# Not needed to build the API (the web manifest stays: it is a lockfile importer)
+.git
+.github
+docs
+apps/web/**
+!apps/web/package.json
+apps/admin
+apps/mobile

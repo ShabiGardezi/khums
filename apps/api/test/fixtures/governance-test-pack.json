@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "packId": "test-governed-pack",
+    "marjaId": "test-marja",
+    "version": "1.0.0",
+    "schemaVersion": 1,
+    "title": "TEST PACK — authorization fixture (not a ruling)",
+    "status": "DRAFT",
+    "isMock": false,
+    "effectiveFrom": "2000-01-01",
+    "effectiveTo": null,
+    "contentHash": null,
+    "researchBaseline": null,
+    "approvals": [],
+    "supersedes": null,
+    "integrity": {
+      "algorithm": "SHA-256",
+      "canonicalization": "khums-jcs-1",
+      "scope": "rule-pack-content-1",
+      "digest": "ac0c4ea793cd9871709b07e7125a9ffb27b8b56bf10ba0ff9c0b43aab26ecaa9"
+    }
+  },
+  "sources": [
+    {
+      "id": "test-source",
+      "title": "TEST source",
+      "url": null,
+      "locator": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "test-rule",
+      "status": "APPROVED",
+      "summary": "TEST",
+      "sourceRefs": ["test-source"],
+      "rulingRefs": ["01a2008d-7400-7800-8000-000000000001@1"]
+    }
+  ],
+  "inputCategories": [
+    {
+      "id": "test-category",
+      "label": "TEST category",
+      "ruleIds": ["test-rule"]
+    }
+  ],
+  "questions": [],
+  "parameters": [],
+  "consultations": [],
+  "workflows": {
+    "annual": null,
+    "firstTime": {
+      "steps": [
+        {
+          "id": "test-sum",
+          "label": "TEST sum",
+          "ruleIds": ["test-rule"],
+          "expression": {
+            "op": "sumCategories",
+            "categoryIds": ["test-category"]
+          },
+          "rounding": null
+        }
+      ],
+      "outputs": [
+        {
+          "id": "test-out",
+          "label": "TEST",
+          "stepId": "test-sum"
+        }
+      ]
+    },
+    "missedYear": null
+  }
+}

@@ -1,0 +1,199 @@
+[
+  {
+    "key": "sis-src-tawdih-fa",
+    "fetchKind": "sistani-tawdih-fa",
+    "payload": {
+      "title": {
+        "original": "توضیح المسائل — احکام خمس",
+        "translation": "Tawdih al-Masa'il — Rulings of Khums"
+      },
+      "originalLanguage": "fa",
+      "sourceClass": "OFFICE_OWN",
+      "sourceTier": 1,
+      "publisher": "Office of Ayatollah Sistani (sistani.org)",
+      "edition": "Web edition; the linked PDF file is named 'edition1447' (no edition number printed)",
+      "publicationDate": {
+        "original": null,
+        "gregorian": null
+      },
+      "url": "https://www.sistani.org/persian/book/50/74/",
+      "authorship": {
+        "statedAuthor": "Ayatollah Sayyid Ali al-Husseini al-Sistani",
+        "establishedBy": null,
+        "status": "UNVERIFIED"
+      },
+      "authenticity": {
+        "status": "UNVERIFIED",
+        "compareWith": [
+          "Islamic Laws, 4th edition (official English)",
+          "Minhaj al-Salihin vol. 1 (Arabic, 1445)"
+        ]
+      },
+      "accessStatus": "READABLE",
+      "copyright": "UNKNOWN",
+      "canonicalForMarja": "UNDECIDED",
+      "notes": "AI-prepared record (Phase 4). Khums rulings 1768–1850 on /74/, distribution 1851–1866 on /75/. Not verified by a scholar."
+    },
+    "ai": [
+      {
+        "assistance": "SOURCE_LOCATING",
+        "field": "payload"
+      }
+    ]
+  },
+  {
+    "key": "sis-src-islamic-laws-en",
+    "fetchKind": "sistani-en",
+    "payload": {
+      "title": {
+        "original": "Islamic Laws (English translation of Tawdih al-Masa'il), 4th edition",
+        "translation": null
+      },
+      "originalLanguage": "en",
+      "sourceClass": "OFFICE_OWN",
+      "sourceTier": 1,
+      "publisher": "The World Federation of KSIMC, published on the office's website",
+      "edition": "4th edition, 2023 (ISBN 978-1-78991-082-7, digital)",
+      "publicationDate": {
+        "original": "2023",
+        "gregorian": null
+      },
+      "url": "https://www.sistani.org/english/book/48/2305/",
+      "authorship": {
+        "statedAuthor": "Ayatollah Sayyid Ali al-Husseini al-Sistani (translation)",
+        "establishedBy": null,
+        "status": "UNVERIFIED"
+      },
+      "authenticity": {
+        "status": "UNVERIFIED",
+        "compareWith": ["Tawdih al-Masa'il (Persian original)"]
+      },
+      "accessStatus": "READABLE",
+      "copyright": "UNKNOWN",
+      "canonicalForMarja": "UNDECIDED",
+      "notes": "OFFICIAL TRANSLATION published by the office (not an AI translation). Same ruling numbers as the Persian. The Persian original governs. AI-prepared record (Phase 4); not verified by a scholar."
+    },
+    "ai": [
+      {
+        "assistance": "SOURCE_LOCATING",
+        "field": "payload"
+      }
+    ]
+  },
+  {
+    "key": "sis-src-jami-fa",
+    "fetchKind": "sistani-jami",
+    "payload": {
+      "title": {
+        "original": "توضیح المسائل جامع — جلد دوم",
+        "translation": "Tawdih al-Masa'il Jami', vol. 2"
+      },
+      "originalLanguage": "fa",
+      "sourceClass": "OFFICE_OWN",
+      "sourceTier": 1,
+      "publisher": "Office of Ayatollah Sistani (sistani.org)",
+      "edition": "چاپ 1403 (as shown on the page)",
+      "publicationDate": {
+        "original": "1403",
+        "gregorian": null
+      },
+      "url": "https://www.sistani.org/persian/book/26576/",
+      "authorship": {
+        "statedAuthor": "Ayatollah Sayyid Ali al-Husseini al-Sistani",
+        "establishedBy": null,
+        "status": "UNVERIFIED"
+      },
+      "authenticity": {
+        "status": "UNVERIFIED",
+        "compareWith": ["Tawdih al-Masa'il (Persian)"]
+      },
+      "accessStatus": "READABLE",
+      "copyright": "UNKNOWN",
+      "canonicalForMarja": "UNDECIDED",
+      "notes": "Khums sections /5997/–/6867/ (190 headings); rulings cited by their masalah number and web section. AI-prepared record (Phase 4); not verified by a scholar."
+    },
+    "ai": [
+      {
+        "assistance": "SOURCE_LOCATING",
+        "field": "payload"
+      }
+    ]
+  },
+  {
+    "key": "sis-src-qa-fa",
+    "fetchKind": "sistani-qa",
+    "payload": {
+      "title": {
+        "original": "پرسش و پاسخ — خمس",
+        "translation": "Questions and answers — Khums"
+      },
+      "originalLanguage": "fa",
+      "sourceClass": "OFFICE_OWN",
+      "sourceTier": 2,
+      "publisher": "Office of Ayatollah Sistani (sistani.org)",
+      "edition": "Web Q&A page; items undated",
+      "publicationDate": {
+        "original": null,
+        "gregorian": null
+      },
+      "url": "https://www.sistani.org/persian/qa/0893/",
+      "authorship": {
+        "statedAuthor": "Office of Ayatollah Sistani (answers)",
+        "establishedBy": null,
+        "status": "UNVERIFIED"
+      },
+      "authenticity": {
+        "status": "UNVERIFIED",
+        "compareWith": ["Tawdih al-Masa'il Jami' vol. 2"]
+      },
+      "accessStatus": "READABLE",
+      "copyright": "UNKNOWN",
+      "canonicalForMarja": "UNDECIDED",
+      "notes": "Undated office answers (tier 2 per SOURCE_INVENTORY); cited by item number on the page. AI-prepared record (Phase 4); not verified by a scholar."
+    },
+    "ai": [
+      {
+        "assistance": "SOURCE_LOCATING",
+        "field": "payload"
+      }
+    ]
+  },
+  {
+    "key": "sis-src-bithat-form",
+    "payload": {
+      "title": {
+        "original": "محاسبہ خمس فارم (نومبر 2026)",
+        "translation": "Khums Calculation Form (November 2026)"
+      },
+      "originalLanguage": "ur",
+      "sourceClass": "SCHOLAR_PROVIDED",
+      "sourceTier": 3,
+      "publisher": "Al-Bi'that Trust, Rajoa Sadat, Chiniot District, Pakistan",
+      "edition": "November 2026 (the trust states a revised version will follow)",
+      "publicationDate": {
+        "original": "نومبر 2026",
+        "gregorian": null
+      },
+      "url": null,
+      "authorship": {
+        "statedAuthor": "Al-Bi'that Trust",
+        "establishedBy": null,
+        "status": "UNVERIFIED"
+      },
+      "authenticity": {
+        "status": "UNVERIFIED",
+        "compareWith": []
+      },
+      "accessStatus": "READABLE",
+      "copyright": "EXCERPTS_ONLY",
+      "canonicalForMarja": "UNDECIDED",
+      "notes": "Decision 81 (owner, 2026-11-24): a form a scholar shared with the owner, who declared it authenticated and accepted it as a research source; it covers Ayatollah Sistani and Ayatollah Khamenei. AI-transcribed short excerpts; not verified by a scholar in this platform."
+    },
+    "ai": [
+      {
+        "assistance": "SOURCE_LOCATING",
+        "field": "payload"
+      }
+    ]
+  }
+]

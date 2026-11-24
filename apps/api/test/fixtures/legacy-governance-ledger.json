@@ -1,0 +1,26 @@
+{
+  "packId": "test-legacy-pack",
+  "version": "1.0.0",
+  "records": [
+    {
+      "type": "SUBMITTED",
+      "recordedAt": "2026-06-01T09:00:00.000Z",
+      "actor": {
+        "kind": "UNVERIFIED_REFERENCE",
+        "subject": "test-legacy-author"
+      },
+      "integrity": {
+        "algorithm": "SHA-256",
+        "canonicalization": "khums-jcs-1",
+        "scope": "rule-pack-content-1",
+        "digest": "e987764a25f9cb0a0a47748103e65f615efcc6ae24aae26824a01ecaad7287d3"
+      },
+      "sequence": 0,
+      "recordId": "test-legacy-pack@1.0.0#0",
+      "packId": "test-legacy-pack",
+      "version": "1.0.0",
+      "previousRecordDigest": null,
+      "recordDigest": "429de984d5264d7021fffcca608b6672f14472a7bca2793cc30c99b6e1d4f405"
+    }
+  ]
+}

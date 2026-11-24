@@ -1,0 +1,260 @@
+@import 'tailwindcss';
+
+/* Scan shared web UI components for class names. */
+@source '../../../../packages/ui/src';
+
+/* Dark mode is class-based and currently dormant (light theme only; see :root.dark below). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Design tokens — Khums Platform design system (M4.1).
+ *
+ * Semantic roles only; components never use raw palette colours. Contrast targets WCAG 2.2 AA:
+ * text ≥ 4.5:1 on its background, form-control borders ≥ 3:1 (non-text contrast, SC 1.4.11).
+ * "mock" is reserved for MOCK / NOT FOR PRODUCTION notices and must not be reused elsewhere.
+ * "provisional" is reserved for PROVISIONAL — FOR SCHOLAR REVIEW ONLY notices (M4.5a).
+ */
+:root {
+  --radius: 0.5rem;
+
+  /* Surfaces & text */
+  --background: oklch(0.985 0.003 90);
+  --foreground: oklch(0.22 0.02 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.02 250);
+  --muted: oklch(0.96 0.005 90);
+  --muted-foreground: oklch(0.45 0.015 250);
+
+  /* Brand */
+  --primary: oklch(0.42 0.075 185);
+  --primary-foreground: oklch(0.99 0 0);
+  --primary-soft: oklch(0.95 0.025 185);
+  --primary-strong: oklch(0.34 0.065 185);
+  --secondary: oklch(0.955 0.008 250);
+  --secondary-foreground: oklch(0.22 0.02 250);
+  --accent: oklch(0.94 0.03 85);
+  --accent-foreground: oklch(0.32 0.045 70);
+
+  /* Lines & focus */
+  --border: oklch(0.9 0.006 250);
+  --input: oklch(0.58 0.012 250);
+  --ring: oklch(0.5 0.09 185);
+
+  /* Status (solid / soft background / text on soft) */
+  --destructive: oklch(0.52 0.19 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --destructive-soft: oklch(0.965 0.025 27);
+  --destructive-strong: oklch(0.42 0.16 27);
+  --success: oklch(0.48 0.12 150);
+  --success-foreground: oklch(0.99 0 0);
+  --success-soft: oklch(0.965 0.03 150);
+  --success-strong: oklch(0.38 0.1 150);
+  --warning: oklch(0.75 0.15 75);
+  --warning-foreground: oklch(0.22 0.04 60);
+  --warning-soft: oklch(0.97 0.045 90);
+  --warning-strong: oklch(0.42 0.1 65);
+  --info: oklch(0.5 0.12 245);
+  --info-foreground: oklch(0.99 0 0);
+  --info-soft: oklch(0.965 0.02 245);
+  --info-strong: oklch(0.42 0.11 245);
+
+  /* MOCK / NOT FOR PRODUCTION — high-visibility, reserved */
+  --mock: oklch(0.87 0.15 88);
+  --mock-foreground: oklch(0.2 0.03 60);
+  --mock-border: oklch(0.55 0.12 70);
+
+  /* PROVISIONAL — FOR SCHOLAR REVIEW ONLY (M4.5a) — high-visibility, reserved, distinct from mock */
+  --provisional: oklch(0.92 0.06 300);
+  --provisional-foreground: oklch(0.25 0.09 300);
+  --provisional-border: oklch(0.5 0.16 300);
+}
+
+/* Dormant dark theme: enabled only by adding `class="dark"` to <html> in a future milestone. */
+:root.dark {
+  --background: oklch(0.17 0.015 250);
+  --foreground: oklch(0.96 0.005 90);
+  --card: oklch(0.21 0.015 250);
+  --card-foreground: oklch(0.96 0.005 90);
+  --muted: oklch(0.25 0.015 250);
+  --muted-foreground: oklch(0.75 0.01 250);
+  --primary: oklch(0.72 0.09 185);
+  --primary-foreground: oklch(0.18 0.03 185);
+  --primary-soft: oklch(0.28 0.04 185);
+  --primary-strong: oklch(0.82 0.08 185);
+  --secondary: oklch(0.26 0.015 250);
+  --secondary-foreground: oklch(0.96 0.005 90);
+  --accent: oklch(0.3 0.03 85);
+  --accent-foreground: oklch(0.92 0.03 85);
+  --border: oklch(0.32 0.015 250);
+  --input: oklch(0.55 0.015 250);
+  --ring: oklch(0.72 0.09 185);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-strong: var(--primary-strong);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive-soft: var(--destructive-soft);
+  --color-destructive-strong: var(--destructive-strong);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-soft: var(--success-soft);
+  --color-success-strong: var(--success-strong);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning-soft: var(--warning-soft);
+  --color-warning-strong: var(--warning-strong);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-info-soft: var(--info-soft);
+  --color-info-strong: var(--info-strong);
+  --color-mock: var(--mock);
+  --color-mock-foreground: var(--mock-foreground);
+  --color-mock-border: var(--mock-border);
+  --color-provisional: var(--provisional);
+  --color-provisional-foreground: var(--provisional-foreground);
+  --color-provisional-border: var(--provisional-border);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+
+  /* System font stacks: fast, private (no font downloads), good script coverage incl. Arabic. */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans',
+    'Noto Sans Arabic', 'Segoe UI Historic', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Roboto Mono', Menlo, Consolas, monospace;
+  /* Urdu: Nastaliq first (the conventional Urdu style), Naskh fallbacks. System fonts only. */
+  --font-urdu:
+    'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', 'Noto Naskh Arabic',
+    'Noto Sans Arabic', 'Segoe UI', system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+  }
+
+  :root.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-balance tracking-tight;
+  }
+
+  /*
+   * Localization typography. `:lang()` follows the document language and any `lang` islands,
+   * so English text inside an Urdu page (e.g. the canonical mock label) keeps English styling.
+   * - Arabic-script text must never be letter-spaced: it breaks letter joining.
+   * - Nastaliq needs generous line height (tall ascenders/descenders); headings must not use
+   *   tight leading or lines collide.
+   */
+  :lang(ur) {
+    font-family: var(--font-urdu);
+    letter-spacing: normal !important;
+  }
+
+  :lang(en) {
+    font-family: var(--font-sans);
+  }
+
+  /* Nastaliq has a small x-height: a larger base size keeps Urdu as readable as English. */
+  html:lang(ur) {
+    font-size: 112.5%;
+  }
+
+  /*
+   * Tailwind v4 font-size utilities set their own line-height in a later cascade layer, so the
+   * Urdu line-height must be !important (important declarations reverse layer precedence).
+   */
+  :lang(ur) {
+    line-height: 2 !important;
+  }
+
+  :lang(ur):is(h1, h2, h3, h4) {
+    line-height: 2.2 !important;
+  }
+
+  /*
+   * Fixed-height controls (h-10) clip Nastaliq at line-height 2. Let Urdu selects and text
+   * inputs grow to fit, keeping the same minimum height as in English. `!important` for the
+   * same reason as the line-height above (utilities are a later cascade layer).
+   */
+  :lang(ur) :is(select, input:not([type='radio'], [type='checkbox'], [type='date'])) {
+    height: auto !important;
+    min-height: 2.5rem;
+    padding-block: 0.25rem !important;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/*
+ * Scholar review report (M4.5.2; layout fixed in M4.6.5 after the Playwright PDF check). While a
+ * review report is printed (the report button adds the body class), everything outside the
+ * report is removed from the layout (not just hidden), so no blank pages are produced; the
+ * report's ancestors stay. The per-page provisional footer is injected as an @page margin box.
+ */
+@media print {
+  body.printing-review-report
+    :where(body *):not(:has(#review-report)):not(#review-report):not(#review-report *) {
+    display: none !important;
+  }
+}
+
+/*
+ * Result print view (Phase 3 step 4, decision 73). While a result is printed (the print button
+ * adds the body class; Ctrl/Cmd+P too while a result is shown), the site header and footer, the
+ * progress steps, every navigation, button and form are removed. The site notice, the page
+ * heading, the result notices, the disclaimer, the rules used (pack trace), the summary and the
+ * breakdown stay; collapsed rule/source lists are expanded by the button's script.
+ */
+@media print {
+  body.printing-results :is(body > header, body > footer, nav, button, form, [data-print-hide]) {
+    display: none !important;
+  }
+}

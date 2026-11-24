@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "pnpm --version && pnpm install --frozen-lockfile --filter @khums/api...",
+  "buildCommand": "pnpm --filter @khums/api build",
+  "outputDirectory": "public",
+  "regions": ["bom1"],
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 300,
+      "includeFiles": "dist/**"
+    }
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }]
+}

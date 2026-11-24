@@ -1,0 +1,37 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "api",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "@khums/api", "dev"],
+      "port": 4000,
+      "url": "http://localhost:4000"
+    },
+    {
+      "name": "web",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "@khums/web", "dev"],
+      "port": 3000
+    },
+    {
+      "name": "api-local-review",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "cd apps/web/e2e && NODE_ENV=test HOST=127.0.0.1 PORT=4100 LOG_LEVEL=silent LOG_FORMAT=json CORS_ORIGINS=http://localhost:3101 KHUMS_OPERATIONAL_STATE=SCHOLAR_REVIEW MONGODB_URI= STAFF_AUTH_SECRET=e2e-only-throttle-key-not-a-secret-0123456789 STAFF_EDGE_SECRET=e2e-only-edge-signing-key-not-a-secret-0123456 KHUMS_REQUIRE_EDGE_SIGNATURE=true STAFF_E2E_FIXTURE_FILE=$PWD/../../api/test/fixtures/e2e-staff.json node ../../api/dist/main.js"
+      ],
+      "port": 4100,
+      "url": "http://127.0.0.1:4100"
+    },
+    {
+      "name": "web-local-review",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "cd apps/web && KHUMS_OPERATIONAL_STATE=SCHOLAR_REVIEW KHUMS_API_ORIGIN=http://127.0.0.1:4100 STAFF_EDGE_SECRET=e2e-only-edge-signing-key-not-a-secret-0123456 KHUMS_CLIENT_IP_HEADER=x-forwarded-for pnpm exec next dev --port 3101"
+      ],
+      "port": 3101
+    }
+  ]
+}

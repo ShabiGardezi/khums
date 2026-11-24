@@ -1,0 +1,39 @@
+{
+  "purpose": "TEST ONLY — fixed Playwright staff account for in-memory test runs (STAFF_E2E_FIXTURE_FILE). Not a real credential; refused in production and with MONGODB_URI.",
+  "superAdmin": {
+    "username": "e2e-admin",
+    "password": "e2e administrator test passphrase 0001"
+  },
+  "scholars": [
+    {
+      "username": "e2e-scholar",
+      "password": "e2e governing scholar test passphrase 0002",
+      "role": "SCHOLAR",
+      "marjaIds": ["test-marja"]
+    },
+    {
+      "username": "e2e-research",
+      "password": "e2e research scholar test passphrase 0003",
+      "role": "SCHOLAR",
+      "marjaIds": ["sistani"]
+    },
+    {
+      "username": "e2e-research-kha",
+      "password": "e2e research scholar khamenei test passphrase 0004",
+      "role": "GOVERNING_SCHOLAR",
+      "marjaIds": ["khamenei"]
+    },
+    {
+      "username": "e2e-scholar-other",
+      "password": "e2e other marja scholar test passphrase 0005",
+      "role": "SCHOLAR",
+      "marjaIds": ["test-other-marja"]
+    },
+    {
+      "username": "e2e-scholar-kha",
+      "password": "e2e khamenei scholar test passphrase 0006",
+      "role": "SCHOLAR",
+      "marjaIds": ["khamenei"]
+    }
+  ]
+}
