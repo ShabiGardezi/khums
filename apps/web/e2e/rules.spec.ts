@@ -31,6 +31,12 @@ const AI_SUBTYPES = {
   tablet: ['INHERITANCE', 'BUSINESS'],
   mobile: ['CHARITY_RECEIVED', 'EMPLOYMENT'],
 } as const;
+/** Entry types of the date and needed-answer TEST rule, per project and retry (never shared). */
+const DATE_SUBTYPES = {
+  desktop: ['SCHOLARSHIP', 'INCOME_SUPPORT'],
+  tablet: ['GRATUITY', 'DEATH_BENEFIT'],
+  mobile: ['LEAVE_ENCASHMENT', 'PROVIDENT_FUND'],
+} as const;
 const SUBTYPES = {
   desktop: ['MINED_PRODUCT', 'BONUS', 'SALE'],
   tablet: ['TREASURE', 'FREELANCE', 'RENTAL'],
@@ -312,5 +318,78 @@ test.describe('scholar rule builder', () => {
     await page.goto(`${REVIEW}/en/admin/rules?marja=${MARJA}`);
     await expect(main.getByRole('region', { name: r.requests.heading })).toHaveCount(0);
     await axe(page);
+  });
+
+  test('dates are checked before a run, and answers the calculation needs are highlighted', async ({
+    page,
+  }, testInfo) => {
+    const project = testInfo.project.name as keyof typeof DATE_SUBTYPES;
+    const subtype = DATE_SUBTYPES[project][testInfo.retry % 2] ?? DATE_SUBTYPES[project][0];
+    const subtypeLabel = (facts.subtypes.INCOME as Readonly<Record<string, string>>)[subtype] ?? '';
+    await signIn(page, KHA_SCHOLAR);
+    const { ruling, passage } = await createResearch(page);
+    const created = await staffFetch(page, 'POST', '/admin/rules', {
+      marjaId: MARJA,
+      content: {
+        category: 'ANNUAL_SURPLUS',
+        rulingId: ruling.entityId,
+        rate: '12.5',
+        includedEntries: [{ kind: 'INCOME', subtype }],
+        deductions: [],
+        conditions: [
+          {
+            scope: 'ENTRY',
+            label: `TEST: is this ${subtype} counted?`,
+            effect: 'INCLUDE',
+            entries: [{ kind: 'INCOME', subtype }],
+          },
+        ],
+        exceptions: [],
+        threshold: null,
+        sourceRefs: [passage.entityId],
+        requirementFlags: [],
+        otherRequirement: null,
+        notes: null,
+      },
+      reason: 'TEST dates and answers',
+    });
+    expect(created.status, JSON.stringify(created.json)).toBe(201);
+
+    await page.goto(`${REVIEW}/en/admin/rules?marja=${MARJA}`);
+    const panel = page.getByRole('main').getByRole('region', { name: r.test.heading });
+    await panel.getByLabel(label(r.test.currency)).fill('USD');
+    await panel.getByLabel(label(r.test.periodStart)).fill('2025-01-01');
+    // More than one year, and an entry far after the year end: blocked before anything is sent.
+    await panel.getByLabel(label(r.test.periodEnd)).fill('2026-01-02');
+    await choose(page, r.test.entryType, `${facts.kinds.INCOME.label}: ${subtypeLabel}`);
+    await expect(panel.getByText(r.test.dateMeaning.INCOME)).toBeVisible();
+    await panel.getByLabel(label(r.test.amount)).fill('80.00');
+    await panel.getByLabel(label(r.test.date)).fill('2026-10-01');
+    await panel.getByRole('button', { name: r.test.run }).click();
+    await expect(panel.getByText(r.test.fixDatesFirst)).toBeVisible();
+    await expect(
+      panel.getByText(r.test.dateIssues.PERIOD_LONGER_THAN_A_YEAR?.replace('{days}', '367') ?? ''),
+    ).toBeVisible();
+    await expect(panel.getByText(r.test.outcome.CALCULATED)).toHaveCount(0);
+    await axe(page);
+
+    // Fixed dates: the run asks for the confirmation, which is highlighted until answered.
+    await panel.getByLabel(label(r.test.periodEnd)).fill('2025-12-31');
+    await panel.getByLabel(label(r.test.date)).fill('2025-06-01');
+    await expect(panel.getByText(r.test.fixDatesFirst)).toHaveCount(0);
+    await panel.getByRole('button', { name: r.test.run }).click();
+    await expect(panel.getByText(r.test.runAgainAfterAnswers)).toBeVisible();
+    await expect(panel.locator('[data-needed="true"]')).toHaveCount(1);
+    await expect(panel.getByText(r.test.neededBadge)).toBeVisible();
+    await axe(page);
+
+    await panel
+      .getByRole('combobox', { name: new RegExp(`is this ${subtype} counted`) })
+      .selectOption('yes');
+    await expect(panel.locator('[data-needed="true"]')).toHaveCount(0);
+    await panel.getByRole('button', { name: r.test.run }).click();
+    await expect(panel.getByText(r.test.outcome.CALCULATED)).toBeVisible();
+    // 80.00 × 12.5 ÷ 100 = 10 (TEST values).
+    await expect(panel.getByText('10 USD')).toBeVisible();
   });
 });

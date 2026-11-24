@@ -289,6 +289,33 @@ export const rulesEn: RulesContent = {
     inflationUnavailable:
       'No official monthly figure is available for this currency and these dates: enter the figure you determine.',
     inflationNeedsDates: 'Enter the test currency, the entry date and the khums year first.',
+    dateIssues: {
+      PERIOD_REQUIRED: 'Enter the first and last day of the khums year.',
+      PERIOD_END_BEFORE_START: 'The last day of the khums year is before its first day.',
+      PERIOD_LONGER_THAN_A_YEAR:
+        'This period is {days} days. A khums year is at most one year (366 days): set the last day to one day before the same date next year.',
+      ENTRY_DATE_REQUIRED: 'Enter the date of this entry.',
+      ENTRY_DATE_TOO_LATE:
+        'This date is {days} days after the khums year ends. Entries must be inside the khums year (or the year moved to include them).',
+      ENTRY_DATE_BEFORE_START:
+        'Before the khums year starts: it is read only as a value at the end of last year (opening value), for example taxed stock, shares or a deposit. Anything else stops for review.',
+      ENTRY_DATE_AFTER_END:
+        '{days} days after the khums year ends: counted only where a rule allows days after the year end (Ayatollah Khamenei: spending within five days). Otherwise it stops for review.',
+    },
+    fixDatesFirst: 'Fix the dates marked below, then run the test.',
+    dateMeaning: {
+      NONE: 'Choose the kind of entry to see which date to enter.',
+      INCOME: 'The day you received this money.',
+      EXPENSE: 'The day you paid this.',
+      BALANCE: 'The day of this balance: normally the last day of the khums year.',
+      ASSET:
+        'The day of the value you enter: normally the last day of the khums year (its value then, not the purchase date). Its price, if asked, is entered separately.',
+      LIABILITY: 'The day of the amount still owed: normally the last day of the khums year.',
+    },
+    neededAnswers:
+      '{count} answers are still needed before the khums can be calculated. They are highlighted below.',
+    neededBadge: 'Needed to calculate',
+    runAgainAfterAnswers: 'Answer the highlighted questions, then run the test again.',
     entryName: 'Entry {entry}',
     reviewStopGeneric: 'A rule stopped for individual review.',
     refusalText:

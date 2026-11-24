@@ -23,7 +23,9 @@ export type {
   CompiledBuilderRule,
   SkippedBuilderRule,
 } from './compile';
-export { builderPackId, builderPackRuleId, compileBuilderPack } from './compile';
+export { builderPackId, builderPackRuleId, compileBuilderPack, LONGEST_YEAR_DAYS } from './compile';
+/** Technical date limits of annual entries (fact-sheet validation), for client-side checks. */
+export { MAX_DAYS_AFTER_YEAR_END } from '@khums/validation';
 export type { RuleRevisionInput, RuleRevisionRefusal } from './revisions';
 export { nextRuleRevision, replayRuleRevisions } from './revisions';
 export type { BuilderTestInput, BuilderTestOutcome } from './test-run';

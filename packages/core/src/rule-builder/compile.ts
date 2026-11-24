@@ -160,7 +160,7 @@ const UNMATCHED = 'builder:unmatched';
 /** Phase 4 (decision 78): an entry dated outside the khums year (and outside any allowed days). */
 const OUT_OF_PERIOD = 'builder:out-of-period';
 /** Phase 4: the longest calendar year (a solar or Gregorian leap year); technical, not a ruling. */
-const LONGEST_YEAR_DAYS = 366;
+export const LONGEST_YEAR_DAYS = 366;
 /** Decision 79: deduction names in pack labels, in words (never code names). */
 const DEDUCTION_WORDS: Readonly<Record<string, string>> = {
   LIVING_EXPENSES: 'living expenses',

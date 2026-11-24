@@ -13,6 +13,7 @@ import {
   entryValue,
   parseEntryValue,
   RULE_FIELDS,
+  checkTestDates,
   ruleRefusalCodes,
   testRequestFrom,
 } from './rule-content';
@@ -207,5 +208,51 @@ describe('rule builder in the console', () => {
     expect(CONTENT.rules.en.statuses.DEVELOPER_IMPLEMENTATION_REQUIRED).toBe(
       'Developer Implementation Required',
     );
+  });
+});
+
+describe('test panel date checks', () => {
+  const row = (id: string, date: string) => ({
+    id,
+    entryType: 'INCOME:EMPLOYMENT',
+    amount: '1',
+    date,
+  });
+  const codes = (start: string, end: string, rows = [row('e1', '2025-06-30')]) =>
+    checkTestDates({ start, end, rows }).map((i) => [i.code, i.severity, i.rowId, i.days]);
+
+  it('accepts a one-year period with entries inside it', () => {
+    expect(codes('2025-01-01', '2025-12-31')).toEqual([]);
+    // A leap year of 366 days is still one year.
+    expect(codes('2024-01-01', '2024-12-31', [row('e1', '2024-02-29')])).toEqual([]);
+  });
+
+  it('blocks a missing, reversed or longer-than-a-year khums year', () => {
+    expect(codes('', '2025-12-31')).toEqual([['PERIOD_REQUIRED', 'error', null, null]]);
+    expect(codes('2025-12-31', '2025-01-01')).toEqual([
+      ['PERIOD_END_BEFORE_START', 'error', null, null],
+    ]);
+    // 1 January to 2 January of the next year: 367 days, both ends included.
+    expect(codes('2025-01-01', '2026-01-02')).toEqual([
+      ['PERIOD_LONGER_THAN_A_YEAR', 'error', null, 367],
+    ]);
+  });
+
+  it('blocks a missing date or one more than 31 days after the year end', () => {
+    expect(codes('2025-01-01', '2025-12-31', [row('e1', '')])).toEqual([
+      ['ENTRY_DATE_REQUIRED', 'error', 'e1', null],
+    ]);
+    expect(codes('2025-01-01', '2025-12-31', [row('e1', '2026-10-01')])).toEqual([
+      ['ENTRY_DATE_TOO_LATE', 'error', 'e1', 274],
+    ]);
+  });
+
+  it('warns (but allows) dates before the start or up to 31 days after the end', () => {
+    expect(
+      codes('2025-01-01', '2025-12-31', [row('e1', '2024-12-31'), row('e2', '2026-01-05')]),
+    ).toEqual([
+      ['ENTRY_DATE_BEFORE_START', 'warning', 'e1', null],
+      ['ENTRY_DATE_AFTER_END', 'warning', 'e2', 5],
+    ]);
   });
 });

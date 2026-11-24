@@ -9,6 +9,7 @@ export {
   FINANCIAL_FACT_SUBTYPES,
   financialFactSchema,
   financialFactSheetSchema,
+  MAX_DAYS_AFTER_YEAR_END,
   MAX_FACT_PERIODS,
   MAX_FACTS_PER_SHEET,
 } from './facts';

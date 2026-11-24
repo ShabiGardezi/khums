@@ -8,10 +8,13 @@ import {
   BUILDER_THRESHOLD_BASES,
   BUILDER_THRESHOLD_EFFECTS,
   FINANCIAL_FACT_SUBTYPES,
+  LONGEST_YEAR_DAYS,
+  MAX_DAYS_AFTER_YEAR_END,
   type BuilderCategory,
   type BuilderEntryRef,
   type BuilderRuleContent,
 } from '@khums/core';
+import { compareIsoDates, daysBetweenIsoDates, isIsoDate } from '@khums/utils';
 
 /**
  * Pure helpers of the rule builder form (Phase 2 steps 3–4): form data ⇄ builder content. They
@@ -217,3 +220,68 @@ export function testRequestFrom(input: {
     ),
   };
 }
+
+/**
+ * Date checks of the test panel, before anything is sent (the server checks again). `error`
+ * blocks the run (the server would refuse it, or the rule could only stop for review);
+ * `warning` explains how the rules will treat the date, and the run may go ahead.
+ */
+export type TestDateIssueCode =
+  | 'PERIOD_REQUIRED'
+  | 'PERIOD_END_BEFORE_START'
+  | 'PERIOD_LONGER_THAN_A_YEAR'
+  | 'ENTRY_DATE_REQUIRED'
+  | 'ENTRY_DATE_TOO_LATE'
+  | 'ENTRY_DATE_BEFORE_START'
+  | 'ENTRY_DATE_AFTER_END';
+
+export interface TestDateIssue {
+  readonly code: TestDateIssueCode;
+  readonly severity: 'error' | 'warning';
+  /** The row id, or null for the khums year. */
+  readonly rowId: string | null;
+  /** Days involved (period length, or days after the year end), for the message. */
+  readonly days: number | null;
+}
+
+export function checkTestDates(input: {
+  readonly start: string;
+  readonly end: string;
+  readonly rows: readonly TestEntryRow[];
+}): readonly TestDateIssue[] {
+  const issues: TestDateIssue[] = [];
+  const issue = (
+    code: TestDateIssueCode,
+    severity: 'error' | 'warning',
+    rowId: string | null = null,
+    days: number | null = null,
+  ) => issues.push({ code, severity, rowId, days });
+  const periodOk = isIsoDate(input.start) && isIsoDate(input.end);
+  if (!periodOk) {
+    issue('PERIOD_REQUIRED', 'error');
+  } else if (compareIsoDates(input.end, input.start) < 0) {
+    issue('PERIOD_END_BEFORE_START', 'error');
+  } else {
+    const days = daysBetweenIsoDates(input.start, input.end) + 1;
+    if (days > LONGEST_YEAR_DAYS) issue('PERIOD_LONGER_THAN_A_YEAR', 'error', null, days);
+  }
+  for (const row of input.rows) {
+    if (!isIsoDate(row.date)) {
+      issue('ENTRY_DATE_REQUIRED', 'error', row.id);
+      continue;
+    }
+    if (!periodOk || compareIsoDates(input.end, input.start) < 0) continue;
+    if (compareIsoDates(row.date, input.start) < 0) {
+      issue('ENTRY_DATE_BEFORE_START', 'warning', row.id);
+    } else if (compareIsoDates(row.date, input.end) > 0) {
+      const after = daysBetweenIsoDates(input.end, row.date);
+      if (after > MAX_DAYS_AFTER_YEAR_END) issue('ENTRY_DATE_TOO_LATE', 'error', row.id, after);
+      else issue('ENTRY_DATE_AFTER_END', 'warning', row.id, after);
+    }
+  }
+  return issues;
+}
+
+/** Decision 81 follow-up: what an entry's date means, by its kind (shown under the date). */
+export const DATE_MEANING_KIND = (entryType: string): FinancialFactKind | null =>
+  parseEntryValue(entryType)?.kind ?? null;

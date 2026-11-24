@@ -205,6 +205,17 @@ export interface RulesContent {
     readonly inflationFell: string;
     readonly inflationUnavailable: string;
     readonly inflationNeedsDates: string;
+    /** Date checks before a run (codes of `checkTestDates`). */
+    readonly dateIssues: Readonly<Record<string, string>>;
+    readonly fixDatesFirst: string;
+    /** What an entry's date means, by its kind; `NONE` before a kind is chosen. */
+    readonly dateMeaning: Readonly<
+      Record<'NONE' | 'ASSET' | 'BALANCE' | 'INCOME' | 'EXPENSE' | 'LIABILITY', string>
+    >;
+    /** Answers the calculation still needs (highlighted). */
+    readonly neededAnswers: string;
+    readonly neededBadge: string;
+    readonly runAgainAfterAnswers: string;
     readonly entryName: string;
     readonly reviewStopGeneric: string;
     readonly refusalText: string;

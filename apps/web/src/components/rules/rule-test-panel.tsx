@@ -21,8 +21,10 @@ import { useHydrated } from '@/lib/use-hydrated';
 
 import { PreparationBadges } from './preparation-status';
 import {
+  checkTestDates,
   ENTRY_TYPES,
   entryValue,
+  parseEntryValue,
   ruleRefusalCodes,
   testRequestFrom,
   type TestEntryRow,
@@ -92,6 +94,8 @@ export function RuleTestPanel(props: {
   ]);
   const [nextKey, setNextKey] = useState(2);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
+  // Date problems that need a value (missing dates) are shown once a run was attempted.
+  const [attempted, setAttempted] = useState(false);
   const [state, setState] = useState<
     | { kind: 'idle' }
     | { kind: 'busy' }
@@ -130,6 +134,20 @@ export function RuleTestPanel(props: {
   const entryName = (factId: string) => {
     const index = rows.findIndex((r) => r.id === factId);
     return formatMessage(t.entryName, { entry: index === -1 ? '—' : String(index + 1) });
+  };
+  // Dates are checked before anything is sent (the server checks them again).
+  const dateIssues = checkTestDates({ start, end, rows }).filter(
+    (i) => attempted || (i.code !== 'PERIOD_REQUIRED' && i.code !== 'ENTRY_DATE_REQUIRED'),
+  );
+  const dateErrors = dateIssues.filter((i) => i.severity === 'error');
+  const issueText = (i: (typeof dateIssues)[number]) =>
+    formatMessage(t.dateIssues[i.code] ?? t.fixDatesFirst, {
+      days: i.days === null ? '' : String(i.days),
+    });
+  const periodError = dateErrors.find((i) => i.rowId === null);
+  const rowIssueText = (rowId: string, severity: 'error' | 'warning'): string | null => {
+    const found = dateIssues.find((i) => i.rowId === rowId && i.severity === severity);
+    return found === undefined ? null : issueText(found);
   };
   const questionOf = (id: string) => last?.questions.find((q) => q.questionId === id);
   const isDecimal = (id: string) => questionOf(id)?.kind === 'decimal';
@@ -175,6 +193,8 @@ export function RuleTestPanel(props: {
   };
 
   const run = () => {
+    setAttempted(true);
+    if (checkTestDates({ start, end, rows }).some((i) => i.severity === 'error')) return;
     const toBool = (a: Answer) => (a === 'yes' ? true : a === 'no' ? false : undefined);
     const calc: Record<string, boolean> = {};
     const perEntry: Record<string, Record<string, boolean | string>> = {};
@@ -256,6 +276,23 @@ export function RuleTestPanel(props: {
       </div>
     );
   };
+  // Answers the calculation still needs: highlighted until given.
+  const neededKeys = new Set(
+    [...calcQuestions.map((q) => q.questionId), ...entryKeys].filter((k) => answered(k) === ''),
+  );
+  const highlighted = (key: string, node: React.ReactNode) =>
+    neededKeys.has(key) ? (
+      <div
+        key={key}
+        data-needed="true"
+        className="border-warning bg-warning-soft flex flex-col gap-1 rounded-md border-2 p-2"
+      >
+        <span className="text-warning-strong text-xs font-semibold">{t.neededBadge}</span>
+        {node}
+      </div>
+    ) : (
+      node
+    );
   const answerSelect = (key: string, label: string) => (
     <Field key={key} label={label}>
       <NativeSelect
@@ -319,7 +356,11 @@ export function RuleTestPanel(props: {
               }}
             />
           </Field>
-          <Field label={t.periodEnd} required>
+          <Field
+            label={t.periodEnd}
+            required
+            {...(periodError === undefined ? {} : { error: issueText(periodError) })}
+          >
             <Input
               type="date"
               required
@@ -369,7 +410,19 @@ export function RuleTestPanel(props: {
                     }}
                   />
                 </Field>
-                <Field label={t.date} required>
+                <Field
+                  label={t.date}
+                  required
+                  description={[
+                    t.dateMeaning[parseEntryValue(row.entryType)?.kind ?? 'NONE'],
+                    rowIssueText(row.id, 'warning'),
+                  ]
+                    .filter((part) => part !== null)
+                    .join(' ')}
+                  {...(rowIssueText(row.id, 'error') === null
+                    ? {}
+                    : { error: rowIssueText(row.id, 'error') })}
+                >
                   <Input
                     type="date"
                     required
@@ -414,7 +467,16 @@ export function RuleTestPanel(props: {
         {(calcQuestions.length > 0 || entryKeys.length > 0) && (
           <fieldset className="flex flex-col gap-3 rounded-md border p-3">
             <legend className="px-1 text-sm font-medium">{t.answers}</legend>
-            {calcQuestions.map((q) => answerSelect(q.questionId, q.label))}
+            {neededKeys.size > 0 && (
+              <Alert variant="warning">
+                <AlertDescription>
+                  {formatMessage(t.neededAnswers, { count: String(neededKeys.size) })}
+                </AlertDescription>
+              </Alert>
+            )}
+            {calcQuestions.map((q) =>
+              highlighted(q.questionId, answerSelect(q.questionId, q.label)),
+            )}
             {entryKeys.map((key) => {
               const [factId = '', questionId = ''] = key.split('|');
               const index = rows.findIndex((r) => r.id === factId);
@@ -422,11 +484,19 @@ export function RuleTestPanel(props: {
                 question: questionLabel(questionId),
                 entry: index === -1 ? factId : String(index + 1),
               });
-              return isDecimal(questionId)
-                ? numberInput(key, label, questionId, factId)
-                : answerSelect(key, label);
+              return highlighted(
+                key,
+                isDecimal(questionId)
+                  ? numberInput(key, label, questionId, factId)
+                  : answerSelect(key, label),
+              );
             })}
           </fieldset>
+        )}
+        {attempted && dateErrors.length > 0 && (
+          <Alert variant="destructive">
+            <AlertDescription>{t.fixDatesFirst}</AlertDescription>
+          </Alert>
         )}
         <div>
           <Button type="submit" disabled={!hydrated || state.kind === 'busy'}>
@@ -457,6 +527,9 @@ export function RuleTestPanel(props: {
               ariaLabel={props.results.provisionalNoticeAriaLabel}
             />
             <p className="font-semibold">{t.outcome[last.outcome]}</p>
+            {neededKeys.size > 0 && (
+              <p className="text-warning-strong text-sm font-medium">{t.runAgainAfterAnswers}</p>
+            )}
             <p className="text-muted-foreground text-xs">{last.disclaimer}</p>
             <dl className="grid gap-1 text-sm sm:grid-cols-[auto_1fr]">
               <dt className="font-medium">{t.compiled}</dt>
