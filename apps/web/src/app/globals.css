@@ -25,6 +25,11 @@
   --muted: oklch(0.96 0.005 90);
   --muted-foreground: oklch(0.45 0.015 250);
 
+  /* Logo artwork (the Mihrab mark): fixed brand colours, the same in every theme. */
+  --brand-green: #124d3b;
+  --brand-gold: #c9a22c;
+  --brand-cream: #f7f5f0;
+
   /* Brand */
   --primary: oklch(0.42 0.075 185);
   --primary-foreground: oklch(0.99 0 0);
@@ -91,6 +96,9 @@
 }
 
 @theme inline {
+  --color-brand-green: var(--brand-green);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-cream: var(--brand-cream);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

@@ -18,7 +18,7 @@ export async function SiteFooter() {
         <div className="flex flex-col gap-10 lg:flex-row lg:justify-between">
           <div className="flex max-w-sm flex-col gap-3">
             <div className="flex items-center gap-2.5 font-semibold">
-              <LogoMark className="size-7" />
+              <LogoMark className="h-8" />
               <span>{site.name}</span>
             </div>
             <p className="text-muted-foreground text-sm">{site.shortDescription}</p>
