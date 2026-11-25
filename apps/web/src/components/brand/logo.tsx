@@ -55,6 +55,28 @@ export function LogoMark({ className }: { className?: string }) {
   );
 }
 
+/**
+ * The logo's wordmark, part of the artwork (a logotype, the same in every locale): "Khums" in brand
+ * green and "خمس" in brand gold, drawn as SVG text so it stays sharp at any size. Decorative: the
+ * link around the logo carries the site's localized name.
+ */
+export function Wordmark({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 120 26" aria-hidden="true" className={cn('h-4 w-auto shrink-0', className)}>
+      <text x="60" y="19" textAnchor="middle" fontSize="18">
+        <tspan className="fill-brand-green font-sans font-bold">Khums</tspan>
+        <tspan dx="7" fontSize="20" className="fill-brand-gold font-naskh">
+          خمس
+        </tspan>
+      </text>
+    </svg>
+  );
+}
+
+/**
+ * The full logo as in the artwork: the mark with the wordmark centred under it. The lockup reads
+ * the same in every locale (mark, then Khums خمس).
+ */
 export function Logo({
   href,
   name,
@@ -67,10 +89,13 @@ export function Logo({
   return (
     <Link
       href={href}
-      className={cn('flex items-center gap-2.5 rounded-md font-semibold tracking-tight', className)}
+      dir="ltr"
+      className={cn('flex flex-col items-center gap-1 rounded-md', className)}
     >
-      <LogoMark />
-      <span className="whitespace-nowrap text-base">{name}</span>
+      <LogoMark className="h-16" />
+      <Wordmark className="h-3.5" />
+      {/* The link's accessible name: the site's localized name (the artwork is decorative). */}
+      <span className="sr-only">{name}</span>
     </Link>
   );
 }

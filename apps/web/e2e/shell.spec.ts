@@ -93,8 +93,12 @@ test.describe('navigation', () => {
       // On phones the primary action lives in the menu, keeping the header on one line.
       await expect(header.getByRole('link', { name: site.links.start })).toBeHidden();
     }
+    // The stacked logo (mark over the wordmark) fits inside the header bar, which stays one row.
     const brandBox = await header.getByRole('link', { name: site.name }).boundingBox();
-    expect(brandBox?.height ?? 0).toBeLessThanOrEqual(40);
+    const headerBox = await header.boundingBox();
+    expect(brandBox?.height ?? 0).toBeGreaterThan(0);
+    expect(brandBox?.height ?? 0).toBeLessThanOrEqual(headerBox?.height ?? 0);
+    expect(headerBox?.height ?? 0).toBeLessThanOrEqual(100);
     await expect(page.getByRole('navigation', { name: site.navigation.mainLabel })).toBeHidden();
 
     await toggle.click();
