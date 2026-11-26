@@ -14,6 +14,7 @@ import { staffBrowserApi } from '@/components/admin/staff-browser-api';
 import { problemMessage } from '@/components/console/problem-message';
 import type { ConsoleContent } from '@/content/console/types';
 import type { FactsContent } from '@/content/facts/types';
+import { PrintResultsButton, RULE_TEST_PRINT_SCOPE } from '@/components/results/print-results';
 import type { ResultsContent } from '@/content/results/types';
 import type { RulesContent } from '@/content/rules/types';
 import { formatMessage } from '@/i18n/format';
@@ -35,6 +36,15 @@ type Answer = string;
 
 interface Row extends TestEntryRow {
   readonly key: number;
+}
+
+/** The inputs of the last run, printed with its result. */
+interface SentTest {
+  readonly currency: string;
+  readonly start: string;
+  readonly end: string;
+  readonly rows: readonly Row[];
+  readonly answers: readonly (readonly [string, Answer])[];
 }
 
 interface OutputValue {
@@ -79,7 +89,7 @@ export function RuleTestPanel(props: {
   readonly facts: Pick<FactsContent, 'kinds' | 'subtypes'>;
   readonly results: Pick<
     ResultsContent,
-    'provisionalLabel' | 'provisionalNoticeAriaLabel' | 'provisionalExplanation'
+    'provisionalLabel' | 'provisionalNoticeAriaLabel' | 'provisionalExplanation' | 'print'
   >;
   readonly common: ConsoleContent['common'];
   /** Localized path of a research ruling record, with `{id}` for its id. */
@@ -99,7 +109,7 @@ export function RuleTestPanel(props: {
   const [state, setState] = useState<
     | { kind: 'idle' }
     | { kind: 'busy' }
-    | { kind: 'done'; value: ScholarRuleTestResponse }
+    | { kind: 'done'; value: ScholarRuleTestResponse; sent: SentTest }
     | { kind: 'error'; message: string; codes: readonly string[] }
   >({ kind: 'idle' });
   const subtypeLabel = (value: string) => {
@@ -113,6 +123,7 @@ export function RuleTestPanel(props: {
   };
 
   const last = state.kind === 'done' ? state.value : null;
+  const sent = state.kind === 'done' ? state.sent : null;
   const calcQuestions = last?.questions.filter((q) => q.scope === 'CALCULATION') ?? [];
   const entryQuestions =
     last?.mapping?.clarifications.filter(
@@ -210,6 +221,14 @@ export function RuleTestPanel(props: {
       const b = toBool(value);
       if (b !== undefined) calc[key] = b;
     }
+    // What this run used, for the printout (the form may change afterwards).
+    const sent: SentTest = {
+      currency,
+      start,
+      end,
+      rows,
+      answers: Object.entries(answers).filter(([, value]) => value.trim() !== ''),
+    };
     setState({ kind: 'busy' });
     void staffBrowserApi()
       .rules.test(
@@ -226,7 +245,7 @@ export function RuleTestPanel(props: {
       .then((result) => {
         setState(
           result.ok
-            ? { kind: 'done', value: result.value }
+            ? { kind: 'done', value: result.value, sent }
             : {
                 kind: 'error',
                 message: problemMessage(result.error, props.common.errors).message,
@@ -520,13 +539,86 @@ export function RuleTestPanel(props: {
           </Alert>
         )}
         {last !== null && (
-          <section aria-label={t.outcome[last.outcome]} className="flex flex-col gap-3">
+          <section
+            id="rule-test-report"
+            aria-label={t.outcome[last.outcome]}
+            className="flex flex-col gap-3"
+          >
             <ProvisionalCalculationNotice
               variant="inline"
               label={props.results.provisionalLabel}
               ariaLabel={props.results.provisionalNoticeAriaLabel}
             />
             <p className="font-semibold">{t.outcome[last.outcome]}</p>
+            <PrintResultsButton
+              label={props.results.print.button}
+              hint={props.results.print.hint}
+              scope={RULE_TEST_PRINT_SCOPE}
+            />
+            {/* Printed only: what a person's printout says, and what this test used. */}
+            <div data-testid="rule-test-print-details" className="hidden text-sm print:block">
+              <p className="mb-2">{props.results.print.reviewNote}</p>
+              {sent !== null && (
+                <>
+                  <p className="font-medium">{t.print.entriesHeading}</p>
+                  <p dir="auto">
+                    {formatMessage(t.print.period, {
+                      start: sent.start,
+                      end: sent.end,
+                      currency: sent.currency,
+                    })}
+                  </p>
+                  <ul className="list-disc ps-5">
+                    {sent.rows.map((row, index) => (
+                      <li key={row.key} dir="auto">
+                        {formatMessage(t.entryName, { entry: String(index + 1) })}:{' '}
+                        {subtypeLabel(row.entryType)} ·{' '}
+                        <span dir="ltr">
+                          {row.amount} {sent.currency}
+                        </span>
+                        {row.date !== '' && (
+                          <>
+                            {' '}
+                            · <span dir="ltr">{row.date}</span>
+                          </>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                  {sent.answers.length > 0 && (
+                    <>
+                      <p className="mt-2 font-medium">{t.print.answersHeading}</p>
+                      <ul className="list-disc ps-5">
+                        {sent.answers.map(([key, value]) => {
+                          const [factId = '', questionId = key] = key.includes('|')
+                            ? key.split('|')
+                            : ['', key];
+                          const shown =
+                            value === 'yes'
+                              ? props.common.yes
+                              : value === 'no'
+                                ? props.common.no
+                                : value;
+                          return (
+                            <li key={key} dir="auto">
+                              {factId !== '' && (
+                                <>
+                                  {formatMessage(t.entryName, {
+                                    entry: String(sent.rows.findIndex((r) => r.id === factId) + 1),
+                                  })}
+                                  :{' '}
+                                </>
+                              )}
+                              {questionLabel(questionId)}: {shown}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </>
+                  )}
+                </>
+              )}
+            </div>
             {neededKeys.size > 0 && (
               <p className="text-warning-strong text-sm font-medium">{t.runAgainAfterAnswers}</p>
             )}

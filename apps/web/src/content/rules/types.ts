@@ -215,6 +215,12 @@ export interface RulesContent {
     /** Answers the calculation still needs (highlighted). */
     readonly neededAnswers: string;
     readonly neededBadge: string;
+    /** Print or save the test result as a PDF (the same parts a person's printout has). */
+    readonly print: {
+      readonly entriesHeading: string;
+      readonly period: string;
+      readonly answersHeading: string;
+    };
     readonly runAgainAfterAnswers: string;
     readonly entryName: string;
     readonly reviewStopGeneric: string;

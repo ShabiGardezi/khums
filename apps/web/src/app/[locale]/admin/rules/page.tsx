@@ -85,6 +85,7 @@ export default async function RulesPage({
                 provisionalLabel: results.provisionalLabel,
                 provisionalNoticeAriaLabel: results.provisionalNoticeAriaLabel,
                 provisionalExplanation: results.provisionalExplanation,
+                print: results.print,
               }}
               common={c.common}
             />

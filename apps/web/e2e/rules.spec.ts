@@ -231,6 +231,25 @@ test.describe('scholar rule builder', () => {
     await expect(panel.getByText('PROVISIONAL — FOR SCHOLAR REVIEW ONLY').first()).toBeVisible();
     await expect(panel.getByText('10 USD')).toBeVisible();
     await axe(page);
+
+    // Print or save as PDF: only the test result is printed, with the same review note a
+    // person's printout has and the entries this run used; the button itself is not printed.
+    const res = CONTENT.results.en;
+    const print = panel.getByTestId('print-results');
+    await expect(print).toHaveText(res.print.button);
+    const details = panel.getByTestId('rule-test-print-details');
+    await expect(details).toBeHidden();
+    await page.evaluate(() => window.dispatchEvent(new Event('beforeprint')));
+    await page.emulateMedia({ media: 'print' });
+    await expect(details).toContainText(res.print.reviewNote);
+    await expect(details).toContainText(r.test.print.entriesHeading);
+    await expect(details).toContainText('80.00 USD');
+    await expect(panel.getByText('10 USD')).toBeVisible();
+    await expect(print).toBeHidden();
+    await expect(main.getByRole('heading', { name: r.test.heading })).toBeHidden();
+    await page.emulateMedia({ media: 'screen' });
+    await page.evaluate(() => window.dispatchEvent(new Event('afterprint')));
+    await expect(print).toBeVisible();
   });
 
   test('another Marja’s rules are read-only (view and test only)', async ({ page }) => {

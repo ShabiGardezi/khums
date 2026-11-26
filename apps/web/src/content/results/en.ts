@@ -69,7 +69,9 @@ export const resultsEn: ResultsContent = {
   },
   print: {
     button: 'Print or save as PDF',
-    hint: 'Prints the notices, the disclaimer, the rules used, the summary and the breakdown, without the site navigation or buttons.',
+    hint: 'Prints the notices, the disclaimer, the rules used, the summary and the breakdown, without the site navigation or buttons. You can show the printout to your Marja’s representative to have it checked. Nothing is sent anywhere.',
+    reviewNote:
+      'To have this calculation checked, show this printout to your Marja’s representative, together with any points listed as needing a consultation. The app does not send it to anyone.',
   },
   disclaimerHeading: 'Calculation disclaimer',
   breakdown: {
@@ -90,7 +92,7 @@ export const resultsEn: ResultsContent = {
     consultation: 'Consultation needed',
     missingAnswer: 'Answer needed',
     consultationHelp:
-      'For a real assessment, this situation would need to be put to your Marja’s office. The app does not decide it.',
+      'For a real assessment, this situation would need to be put to your Marja’s office or representative; take the printed result with you. The app does not decide it.',
   },
   questions: {
     heading: 'Questions',
@@ -135,7 +137,7 @@ export const resultsEn: ResultsContent = {
   },
   consultations: {
     heading: 'Entries that need a consultation',
-    help: 'For a real assessment, these would need to be put to your Marja’s office.',
+    help: 'For a real assessment, these would need to be put to your Marja’s office or representative; take the printed result with you.',
   },
   unsupported: {
     heading: 'Not supported',

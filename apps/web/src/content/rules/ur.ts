@@ -314,6 +314,11 @@ export const rulesUr: RulesContent = {
     neededAnswers:
       'خمس کا حساب ہونے سے پہلے ابھی {count} جوابات درکار ہیں۔ وہ نیچے نمایاں کیے گئے ہیں۔',
     neededBadge: 'حساب کے لیے ضروری',
+    print: {
+      entriesHeading: 'جانچ کے اندراجات',
+      period: 'خمس کا سال {start} سے {end} تک، کرنسی {currency}',
+      answersHeading: 'دیے گئے جوابات',
+    },
     runAgainAfterAnswers: 'نمایاں کیے گئے سوالات کے جواب دیں، پھر جانچ دوبارہ چلائیں۔',
     entryName: 'اندراج {entry}',
     reviewStopGeneric: 'ایک قاعدہ انفرادی جائزے کے لیے رک گیا۔',

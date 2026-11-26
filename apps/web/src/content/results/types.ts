@@ -77,7 +77,12 @@ export interface ResultsContent {
     readonly noDigest: string;
   };
   /** Print view (Phase 3 step 4): the browser's print dialog, where "Save as PDF" is offered. */
-  readonly print: { readonly button: string; readonly hint: string };
+  readonly print: {
+    readonly button: string;
+    readonly hint: string;
+    /** Printed only (top of the printout): take it to the Marja's representative for checking. */
+    readonly reviewNote: string;
+  };
   /** The engine's own disclaimer (`meta.disclaimer`), shown verbatim under this heading. */
   readonly disclaimerHeading: string;
   readonly breakdown: {

@@ -270,3 +270,17 @@
     display: none !important;
   }
 }
+
+/*
+ * Rule builder test result print view (staff). Only the test result (#rule-test-report) is
+ * printed, as the review report above; its buttons are removed and print-only parts shown.
+ */
+@media print {
+  body.printing-rule-test
+    :where(body *):not(:has(#rule-test-report)):not(#rule-test-report):not(#rule-test-report *) {
+    display: none !important;
+  }
+  body.printing-rule-test #rule-test-report :is(button, [data-print-hide]) {
+    display: none !important;
+  }
+}

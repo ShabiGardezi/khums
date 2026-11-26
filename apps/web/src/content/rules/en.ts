@@ -315,6 +315,11 @@ export const rulesEn: RulesContent = {
     neededAnswers:
       '{count} answers are still needed before the khums can be calculated. They are highlighted below.',
     neededBadge: 'Needed to calculate',
+    print: {
+      entriesHeading: 'Test entries',
+      period: 'Khums year {start} to {end}, currency {currency}',
+      answersHeading: 'Answers given',
+    },
     runAgainAfterAnswers: 'Answer the highlighted questions, then run the test again.',
     entryName: 'Entry {entry}',
     reviewStopGeneric: 'A rule stopped for individual review.',

@@ -280,6 +280,12 @@ export function ResultsPanel(props: ResultsPanelProps) {
             )}
           </section>
         )}
+      {props.context !== 'PROVISIONAL' && (
+        // Printed only: the person takes the printout to their Marja's representative themselves.
+        <p data-testid="print-review-note" className="hidden text-sm print:block">
+          {content.print.reviewNote}
+        </p>
+      )}
       {props.header}
       <StatusLine run={run} content={content} provisional={props.context === 'PROVISIONAL'} />
       {props.actions}

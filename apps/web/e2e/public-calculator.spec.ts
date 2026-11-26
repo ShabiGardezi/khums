@@ -433,6 +433,9 @@ test.describe('result summary and print view (Phase 3 step 4)', () => {
 
       const print = summary.getByTestId('print-results');
       await expect(print).toHaveText(h.r.print.button);
+      // The "show it to your Marja's representative" note appears only on the printout.
+      const reviewNote = h.main.getByTestId('print-review-note');
+      await expect(reviewNote).toBeHidden();
       expect((await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze()).violations).toEqual([]);
 
       // Print view: navigation and buttons are removed; notices, disclaimer, trace, summary and
@@ -447,6 +450,7 @@ test.describe('result summary and print view (Phase 3 step 4)', () => {
       await expect(h.main.getByTestId('verified-pack-trace')).toBeVisible();
       await expect(h.main.getByTestId('verified-disclaimer')).toBeVisible();
       await expect(breakdown).toBeVisible();
+      await expect(reviewNote).toHaveText(h.r.print.reviewNote);
       await expect(h.main.locator('[data-results-print] details:not([open])')).toHaveCount(0);
       await page.emulateMedia({ media: 'screen' });
       await page.evaluate(() => window.dispatchEvent(new Event('afterprint')));
